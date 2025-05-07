@@ -24,7 +24,7 @@ export default function StatCard({
 
   return (
     <Link href={link}>
-      <div className="bg-white rounded-2xl shadow-sm p-5 w-full max-w-xs transition hover:shadow-md hover:scale-[1.02] cursor-pointer">
+      <div className="bg-white rounded-2xl shadow-sm p-5 w-full transition hover:shadow-md hover:scale-[1.02] cursor-pointer">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <i className={`fr fi-rr-${iconMap[title]} text-primary leading-none text-xl`} />

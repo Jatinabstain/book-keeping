@@ -327,3 +327,6 @@ body {
 .arrows{
   font-size: 14px !important;
 }
+.bg-overlay{
+  background-color: rgba(0, 0, 0, .5);
+}

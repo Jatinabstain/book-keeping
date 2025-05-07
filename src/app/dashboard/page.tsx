@@ -22,7 +22,7 @@ export default function DashboardPage() {
                     </div>
                 </div>
                 <hr className="opacity-30 my-6" />
-                <div className="flex items-center space-x-6 bg-white text-primary">
+                <div className="flex items-center space-x-6 bg-white text-primary flex-wrap">
                     <div className="flex items-center space-x-2">
                         <div className="w-6 h-6 rounded-full bg-primary text-white text-sm flex items-center justify-center font-semibold">
                             4
@@ -46,7 +46,7 @@ export default function DashboardPage() {
 
             {/* cards */}
             <div className="mt-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-2 gap-6">
                     {stats.map((stat, index) => (
                         <StatCard key={index} {...stat} />
                     ))}
