@@ -9,8 +9,7 @@ export default function DashboardPage() {
     ];
 
     return (
-        <section className="mx-auto max-w-[1200px] px-[15px] w-full">
-            <div className="mt-8"></div>
+        <section className="mx-auto max-w-[1200px] px-[15px] w-full pt-8">
             <div className="jumbotron rounded-2xl">
                 <div className="flex items-center justify-between text-center md:flex-row flex-col gap-y-4">
                     <div className="text-start">

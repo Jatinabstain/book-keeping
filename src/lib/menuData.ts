@@ -12,20 +12,7 @@ export const menuData: MenuItem[] = [
         icon: "fi fi-rr-dashboard",
         label: "Dashboard",
         href: "/dashboard",
-        children: [
-            {
-                slug: "overview",
-                icon: "fi fi-rr-angle-double-small-right",
-                label: "Overview",
-                href: "/dashboard/overview",
-            },
-            {
-                slug: "reports",
-                icon: "fi fi-rr-angle-double-small-right",
-                label: "Reports",
-                href: "/dashboard/reports",
-            },
-        ],
+        children: [],
     },
     {
         slug: "task",
@@ -39,14 +26,58 @@ export const menuData: MenuItem[] = [
         icon: "fi fi-rr-diary-clasp",
         label: "Books",
         href: "/books",
-        children: [],
+        children: [
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Financial Statements",
+                href: '#',
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Insights",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "AP/AR Aging",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Revenue Waterfall",
+                href: "#"
+            }
+        ],
     },
     {
         slug: "cash",
         icon: "fi fi-rr-chart-histogram",
         label: "Cash",
-        href: "/settings",
-        children: [],
+        href: "/cash",
+        children: [
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Accounts",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Change in Cash",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Cash Spend",
+                href: "#"
+            }
+        ],
     },
     {
         slug: "bank-transactions",

@@ -181,14 +181,14 @@ body {
 }
 
 .menu li a,
-.user_setting_menu {
+.user_setting_menu, .menu .arrows {
   position: relative;
   text-decoration: none;
   display: flex;
   align-items: center;
   cursor: pointer;
   gap: 12px;
-  color: var(--textLight);
+  color: var(--light);
   position: relative;
   padding: 12px 12px 12px 26px;
   font-weight: 500;
@@ -223,17 +223,17 @@ body {
   position: relative;
 }
 
-.menu>li>a:hover {
+.menu > li > .sidebar-item:hover {
   color: var(--light);
   background-color: var(--primary);
 }
 
-.menu>li>a>i {
-  font-size: 20px;
+.menu > li > .sidebar-item  i {
+  font-size: 17px;
   line-height: 1;
 }
 
-.menu>li.active>a {
+.menu>li.active> .sidebar-item {
   color: var(--light);
   background-color: #171b21;
 }
@@ -265,6 +265,7 @@ body {
 
 .menu li li a:hover {
   color: var(--light);
+  background-color: var(--primaryHover);
 }
 
 .menu li li.active>a {
@@ -282,6 +283,11 @@ body {
 
 .menu li li li li ul a {
   padding-left: 80px;
+}
+
+.sidebar-item.open{
+  color: var(--light);
+  background-color: var(--primary);
 }
 
 .divider {

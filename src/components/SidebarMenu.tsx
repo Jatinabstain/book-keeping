@@ -21,25 +21,30 @@ export default function SidebarMenu({ menu }: { menu: MenuItem[] }) {
         const isOpen = openItems[item.slug];
 
         return (
-          <li key={item.slug}>
-            <Link href={item.href} className="flex items-center gap-2 py-2 px-3" onClick={() => hasChildren && toggleItem(item.slug)}>
-              <i className={`${item.icon}`} />
-              <span className="flex-1">
-                {item.label}
-              </span>
+          <li key={item.slug}
+            className={`sidebar-item ${isOpen ? "open" : ""} ${hasChildren ? "has-children" : ""
+              }`}
+          >
+            <div className="sidebar-item flex items-center gap-2">
+              <Link href={item.href} className="flex-1">
+                <i className={`${item.icon}`} />
+                <span className="flex-1">
+                  {item.label}
+                </span>
+              </Link>
               {hasChildren && (
                 <i
-                  className={`${
-                    isOpen ? "fi fi-rr-angle-up" : "fi fi-rr-angle-down"
-                  } arrows`}
+                  className={`${isOpen ? "fi fi-rr-angle-up" : "fi fi-rr-angle-down"
+                    } arrows`}
+                  onClick={() => hasChildren && toggleItem(item.slug)}
                 />
               )}
-            </Link>
+            </div>
 
             {hasChildren && isOpen && (
               <ul className="mt-1 space-y-1">
                 {(item.children ?? []).map((child) => (
-                  <li key={child.slug}>
+                  <li key={child.label}>
                     <Link href={child.href} className="flex items-center gap-2 text-sm text-gray-600 hover:underline">
                       <i className={`${child.icon} text-base`} />
                       <span>{child.label}</span>
