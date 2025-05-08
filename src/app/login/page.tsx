@@ -58,7 +58,7 @@ export default function LoginPage() {
             // Redirect to dashboard or another page
             window.location.href = "/dashboard";
         } catch (err) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
+            const errorMessage = (err as Error)?.message || 'An unknown error occurred';
             setErrors({ email: errorMessage, password: '' });  // Show error message
         } finally {
             setLoading(false);  // Reset loading state
