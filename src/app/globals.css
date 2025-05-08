@@ -19,22 +19,7 @@
   
 }
 
-/* @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 a {
-  /* color: var(--primary); */
   text-decoration: none;
   background-color: transparent;
 }
@@ -53,6 +38,10 @@ body {
 
 .text-primary {
   color: var(--primary) !important;
+}
+
+.border-color {
+  border-color: var(--primary) !important;
 }
 
 .form-control {
@@ -336,6 +325,7 @@ body {
 }
 .dashboard_card{
   position: relative;
+  color: var(--primary);
 }
 .dashboard_card i{
   position: absolute;
@@ -349,4 +339,9 @@ body {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.table_custom td, .table_custom th {
+  padding: 0.5rem 1.25rem;
+  text-wrap: nowrap;
+  border-bottom: 1px solid var(--border);
 }

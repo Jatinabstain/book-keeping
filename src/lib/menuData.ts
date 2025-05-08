@@ -54,16 +54,16 @@ export const menuData: MenuItem[] = [
         ],
     },
     {
-        slug: "cash",
+        slug: "cash/accounts",
         icon: "fi fi-rr-chart-histogram",
         label: "Cash",
-        href: "/cash",
+        href: "/cash/accounts",
         children: [
             {
-                slug: "#",
+                slug: "cash/accounts",
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Accounts",
-                href: "#",
+                href: "/cash/accounts",
             },
             {
                 slug: "#",

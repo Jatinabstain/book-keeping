@@ -10,7 +10,7 @@ export default function Sidebar() {
 
     return (
         <>
-            <section className="sidebar sticky top-0 flex-col shrink-0 hidden lg:flex w-64 bg-white border-r">
+            <section className="sidebar sticky top-0 flex-col shrink-0 hidden lg:flex w-64 bg-white">
                 <div className="navigation logo p-4">
                     <Link href="/dashboard">
                         <Image
@@ -22,7 +22,7 @@ export default function Sidebar() {
                     </Link>
                 </div>
                 
-                <div className="scrollarea grow pt-3 px-4">
+                <div className="scrollarea grow pt-3">
                     <SidebarMenu menu={menuData} />
                     <hr className="divider mt-2" />
                 </div>

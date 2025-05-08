@@ -21,6 +21,10 @@ const nextConfig: NextConfig = {
             destination: '/dashboard/cash'
         },
         {
+            source: '/cash/accounts',
+            destination: '/dashboard/cash/accounts'
+        },
+        {
             source: '/bank-transactions',
             destination: '/dashboard/bank-transactions'
         },

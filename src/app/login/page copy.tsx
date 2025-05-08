@@ -36,7 +36,7 @@ export default function LoginPage() {
         setLoading(true);  // Set loading to true when starting login attempt
 
         try {
-            const response = await fetch(backendUrl + 'login', {
+            const response = await fetch(backendUrl+'login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -58,8 +58,7 @@ export default function LoginPage() {
             // Redirect to dashboard or another page
             window.location.href = "/dashboard";
         } catch (err) {
-            const errorMessage = err instanceof Error ? err.message : 'An unknown error occurred';
-            setErrors({ email: errorMessage, password: '' });  // Show error message
+            setErrors({ email: err.message, password: '' });  // Show error message
         } finally {
             setLoading(false);  // Reset loading state
         }
@@ -92,7 +91,7 @@ export default function LoginPage() {
                                         className="form-control w-full border p-2 rounded"
                                     />
                                     {errors.email && (
-                                        <p className="text-red-500 text-sm text-start pt-1">{errors.email}</p>
+                                        <p className="text-red-500 text-sm">{errors.email}</p>
                                     )}
                                 </div>
 
@@ -105,7 +104,7 @@ export default function LoginPage() {
                                         className="form-control w-full border p-2 rounded"
                                     />
                                     {errors.password && (
-                                        <p className="text-red-500 text-sm text-start pt-1">{errors.password}</p>
+                                        <p className="text-red-500 text-sm">{errors.password}</p>
                                     )}
                                 </div>
 
@@ -120,8 +119,12 @@ export default function LoginPage() {
                         </div>
 
                         <div className="login_card_footer mt-6 text-center text-sm text-gray-700">
+                            <p>
+                                Don&apos;t have an account?{" "}
+                                <a href="/register" className="text-blue-600 hover:underline">Register</a>
+                            </p>
                             <p className="mt-2">
-                                <a href="/forgot-password" className="text-primary font-semibold hover:underline">Forgot Password?</a>
+                                <a href="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</a>
                             </p>
                         </div>
                     </div>

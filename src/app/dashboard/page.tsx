@@ -12,7 +12,7 @@ export default function DashboardPage() {
     ];
 
     return (
-        <section className="mx-auto max-w-[1200px] px-[15px] w-full pt-8">
+        <section className="mx-auto max-w-[1400px] px-[15px] w-full pt-8">
             <div className="bg-white p-4 mb-5 shadow">
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-2">
                     <div className="text-center sm:text-left text-primary">
