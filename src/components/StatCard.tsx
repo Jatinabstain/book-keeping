@@ -24,21 +24,22 @@ export default function StatCard({
 
   return (
     <Link href={link}>
-      <div className="bg-white rounded-2xl shadow-sm p-5 w-full transition hover:shadow-md hover:scale-[1.02] cursor-pointer">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <i className={`fr fi-rr-${iconMap[title]} text-primary leading-none text-xl`} />
-            <h3 className="text-sm font-semibold text-gray-800">{title}</h3>
+      <div className="bg-white border border-gray-200 p-4 w-full hover:shadow-md hover:ring-1 hover:ring-primary transition-all duration-200 cursor-pointer dashboard_card">
+        <div className="flex items-start justify-between mb-2">
+          <div>
+            <h3 className="text-sm font-semibold text-gray-700">{title}</h3>
+            <p className="text-xs text-gray-400 mt-0.5">{note}</p>
           </div>
-          <span className="text-gray-400 text-lg">&rsaquo;</span>
+          <div className="bg-primary/10 text-primary p-2 rounded-md">
+            <i className={`fr fi-rr-${iconMap[title]} text-base`} />
+          </div>
         </div>
-        <div className="mt-3 text-2xl font-bold text-gray-900">
-          {amount}
-          <span className={`ml-2 text-sm font-semibold ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
+        <div className="flex items-end justify-between">
+          <div className="text-xl font-bold text-gray-900">{amount}</div>
+          <span className={`text-xs font-semibold ${isPositive ? 'text-green-600' : 'text-red-600'}`}>
             {change}
           </span>
         </div>
-        <p className="text-sm text-gray-500 mt-1">{note}</p>
       </div>
     </Link>
   );

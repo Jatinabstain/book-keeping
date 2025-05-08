@@ -13,8 +13,8 @@ const nextConfig: NextConfig = {
             destination: '/dashboard/task'
         },
         {
-            source: '/books',
-            destination: '/dashboard/books'
+            source: '/financial-statements',
+            destination: '/dashboard/financial-statements'
         },
         {
             source: '/cash',

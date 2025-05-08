@@ -25,19 +25,19 @@ export const menuData: MenuItem[] = [
         slug: "books",
         icon: "fi fi-rr-diary-clasp",
         label: "Books",
-        href: "/books",
+        href: "/financial-statements",
         children: [
             {
-                slug: "#",
+                slug: "financial-statements",
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Financial Statements",
-                href: '#',
+                href: '/financial-statements',
             },
             {
-                slug: "#",
+                slug: "profile",
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Insights",
-                href: "#",
+                href: "/profile",
             },
             {
                 slug: "#",
