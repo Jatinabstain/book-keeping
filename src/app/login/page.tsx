@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function LoginPage() {
-    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+    const backendUrl = 'http://24.144.109.202:5000/login';
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
