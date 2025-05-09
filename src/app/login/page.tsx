@@ -41,11 +41,8 @@ export default function LoginPage() {
                             </form>
                         </div>
                         <div className="login_card_footer mt-6 text-center text-sm text-gray-700">
-                            <p>
-                                Don`&apos;`t have an account? <a href="/register" className="text-blue-600 hover:underline">Register</a>
-                            </p>
                             <p className="mt-2">
-                                <a href="/forgot-password" className="text-blue-600 hover:underline">Forgot Password?</a>
+                                <a href="/forgot-password" className="text-primary font-semibold">Forgot Password?</a>
                             </p>
                         </div>
                     </div>
