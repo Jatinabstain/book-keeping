@@ -34,10 +34,10 @@ export const menuData: MenuItem[] = [
                 href: '/financial-statements',
             },
             {
-                slug: "profile",
+                slug: "insights",
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Insights",
-                href: "/profile",
+                href: "/insights",
             },
             {
                 slug: "#",

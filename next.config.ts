@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
             destination: '/dashboard/financial-statements'
         },
         {
+            source: '/insights',
+            destination: '/dashboard/insights'
+        },
+        {
             source: '/cash',
             destination: '/dashboard/cash'
         },

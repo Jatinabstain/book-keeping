@@ -4,12 +4,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const tabs = [
-  { label: "Profit & Loss", href: "/financial-statements" },
-  { label: "Balance Sheet", href: "#" },
-  { label: "Cash Flow Statement", href: "#" },
+  { label: "Recurring Expenses", href: "/insights" },
+  { label: "Burn Rate", href: "#" },
+  { label: "Flux Insights", href: "#" },
 ];
 
-export default function ReportTabs() {
+export default function InsightsTabs() {
   const pathname = usePathname();
 
   return (

@@ -68,8 +68,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {/* Desktop layout */}
             <div className="flex">
                 <Sidebar />
-                <main className="flex-1">
-                    {children}
+                <main className="flex-1 flex flex-col">
+                    <div className="flex-1 pb-8">
+                        {children}
+                    </div>
+
+                    <footer className="mt-auto bg-primary text-white text-center py-2 text-[14px]">
+                        &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+                    </footer>
                 </main>
             </div>
 
@@ -77,6 +83,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             {isSidebarOpen && (
                 <div className="fixed inset-0 bg-overlay z-40 lg:hidden" onClick={() => setIsSidebarOpen(false)}></div>
             )}
+
+            
         </>
     );
 }
