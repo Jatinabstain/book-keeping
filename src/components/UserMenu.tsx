@@ -9,10 +9,41 @@ export default function UserMenu() {
     const buttonRef = useRef<HTMLButtonElement>(null);
     const menuRef = useRef<HTMLUListElement>(null);
 
-    const toggleDropdown = () => {
-        setIsOpen(!isOpen);
-    };
+    const toggleDropdown = () => setIsOpen((prev) => !prev);
 
+    // Close on click outside
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+            if (
+                buttonRef.current &&
+                !buttonRef.current.contains(event.target as Node) &&
+                menuRef.current &&
+                !menuRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        };
+
+        if (isOpen) {
+            document.addEventListener("pointerdown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("pointerdown", handleClickOutside);
+        };
+    }, [isOpen]);
+
+    // Close on Escape key
+    useEffect(() => {
+        const handleEscape = (e: KeyboardEvent) => {
+            if (e.key === "Escape") setIsOpen(false);
+        };
+
+        document.addEventListener("keydown", handleEscape);
+        return () => document.removeEventListener("keydown", handleEscape);
+    }, []);
+
+    // Determine dropdown direction
     useEffect(() => {
         if (isOpen && buttonRef.current && menuRef.current) {
             const buttonRect = buttonRef.current.getBoundingClientRect();
@@ -37,14 +68,13 @@ export default function UserMenu() {
             {isOpen && (
                 <ul
                     ref={menuRef}
-                    className={`absolute right-4 bg-gray-800 text-white rounded-md shadow-lg z-50 w-48 text-sm overflow-hidden transition-all ${
-                        dropUp ? "bottom-full mb-2" : "top-full mt-2"
-                    }`}
+                    className={`absolute right-4 bg-gray-800 text-white rounded-md shadow-lg z-50 w-48 text-sm overflow-hidden transition-all ${dropUp ? "bottom-full mb-2" : "top-full mt-2"
+                        }`}
                 >
                     <li>
                         <Link
-                            href="/dashboard/profile"
-                            className="dropdown-item block px-4 py-2 hover:bg-gray-700"
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-700"
                         >
                             Profile
                         </Link>
@@ -52,7 +82,7 @@ export default function UserMenu() {
                     <li>
                         <Link
                             href="/"
-                            className="dropdown-item block px-4 py-2 hover:bg-gray-700"
+                            className="block px-4 py-2 hover:bg-gray-700"
                         >
                             Logout
                         </Link>
