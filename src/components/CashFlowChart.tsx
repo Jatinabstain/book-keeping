@@ -51,7 +51,7 @@ export default function CashFlowChart() {
     return (
         <div className="bg-white px-6 py-4 shadow w-full mx-auto">
             <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
-                <Link href="/cash" className='flex justify-baseline items-center gap-3'>
+                <Link href="#" className='flex justify-baseline items-center gap-3'>
                     <div>
                         <h2 className="text-lg font-semibold text-gray-800">Cash Flow - {view}</h2>
                         <p className="text-xs text-gray-400">Based on latest entries</p>
