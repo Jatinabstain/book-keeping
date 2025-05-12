@@ -137,11 +137,11 @@ export default function MetricsTable() {
             <tbody>
               {metrics.map((metric, rowIdx) => (
                 <tr key={metric} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-white'}>
-                  <td className="sticky left-0 whitespace-nowrap bg-white z-10 p-3 px-8 border-r border-gray-100 font-medium text-gray-800  border-b">
+                  <td className="sticky left-0 whitespace-nowrap bg-white z-10 p-3 px-8 border-r border-gray-200 font-medium text-gray-800">
                     {metric}
                   </td>
                   {filteredIndexes.map((i) => (
-                    <td key={i} className="p-3 px-8 text-right border-gray-100 text-gray-700 border-b">
+                    <td key={i} className="p-3 px-8 text-right border-gray-100 text-gray-700 border-bottomz">
                       ${metricsData[metric][i]?.toLocaleString() || '—'}
                     </td>
                   ))}

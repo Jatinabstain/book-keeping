@@ -28,9 +28,8 @@ export default function SidebarMenu({ menu }: { menu: MenuItem[] }) {
         return (
           <li
             key={item.slug}
-            className={`sidebar-item ${isOpen ? "open" : ""} ${
-              hasChildren ? "has-children" : ""
-            } ${isActive || hasActiveChild ? "active" : ""}`}
+            className={`sidebar-item ${isOpen ? "open" : ""} ${hasChildren ? "has-children" : ""
+              } ${isActive || hasActiveChild ? "active" : ""}`}
           >
             <div className="sidebar-item flex items-center gap-2">
               <Link href={item.href} className="flex-1">
@@ -39,9 +38,8 @@ export default function SidebarMenu({ menu }: { menu: MenuItem[] }) {
               </Link>
               {hasChildren && (
                 <i
-                  className={`${
-                    isOpen ? "fi fi-rr-angle-up" : "fi fi-rr-angle-down"
-                  } arrows`}
+                  className={`${isOpen ? "fi fi-rr-angle-up" : "fi fi-rr-angle-down"
+                    } arrows`}
                   onClick={() => toggleItem(item.slug)}
                 />
               )}
