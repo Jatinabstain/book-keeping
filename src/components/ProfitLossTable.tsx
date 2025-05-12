@@ -13,7 +13,7 @@ const months = [
 
 const monthDates = months.map((label) => {
   const [mon, year] = label.split(' ');
-  return new Date(`${mon} 1, ${year}`);
+  return new Date(`${mon} .4, ${year}`);
 });
 
 const baseData: { [key: string]: number[] } = {
@@ -73,7 +73,7 @@ export default function MetricsTable() {
           </button>
           <button
             onClick={() => setFilterType('custom')}
-            className={`p-2 text-sm ${filterType === 'custom' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+            className={`p-2 text-sm ${filterType === 'custom' ? 'bg-primary  text-white' : 'bg-gray-200'}`}
           >
             Custom Date Range
           </button>
@@ -121,16 +121,14 @@ export default function MetricsTable() {
       </div>
 
       {/* Table Section */}
-      <div className="overflow-x-auto border border-gray-200">
-        <div className="overflow-auto bg-white">
-          <table className="min-w-[1000px] w-full text-sm text-gray-500 border-collapse table_custom">
-            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <div className="w-full overflow-x-auto">
+        <div className="max-w-[200px]">
+          <table className=" w-full text-sm text-gray-500 border-collapse table_custom1">
+            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
               <tr>
-                <th className="sticky left-0 bg-gray-100 z-10 p-6 px-8 w-60 text-left font-semibold border-gray-200">
-                  
-                </th>
+                <th className="sticky left-0 whitespace-nowrap bg-gray-100 z-10 p-2 px-8 w-60 text-left font-semibold border-gray-200"></th>
                 {filteredMonths.map((month) => (
-                  <th key={month} className="p-3 border-r border-gray-200 whitespace-nowrap text-center font-medium">
+                  <th key={month} className="p-2.5 border-r border-gray-200 whitespace-nowrap text-center font-medium">
                     {month}
                   </th>
                 ))}
@@ -139,11 +137,11 @@ export default function MetricsTable() {
             <tbody>
               {metrics.map((metric, rowIdx) => (
                 <tr key={metric} className={rowIdx % 2 === 0 ? 'bg-white' : 'bg-white'}>
-                  <td className="sticky left-0 bg-white z-10 p-6 px-8  border-r border-gray-200 font-medium text-gray-800">
+                  <td className="sticky left-0 whitespace-nowrap bg-white z-10 p-3 px-8 border-r border-gray-100 font-medium text-gray-800  border-b">
                     {metric}
                   </td>
                   {filteredIndexes.map((i) => (
-                    <td key={i} className="p-6 px-8 text-right  border-gray-100 text-gray-700">
+                    <td key={i} className="p-3 px-8 text-right border-gray-100 text-gray-700 border-b">
                       ${metricsData[metric][i]?.toLocaleString() || '—'}
                     </td>
                   ))}
@@ -151,7 +149,6 @@ export default function MetricsTable() {
               ))}
             </tbody>
           </table>
-
         </div>
       </div>
     </section>

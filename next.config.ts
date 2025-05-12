@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
         {
-            source: '/task',
-            destination: '/dashboard/task'
+            source: '/todo-list',
+            destination: '/dashboard/todo-list'
         },
         {
             source: '/financial-statements',
@@ -21,12 +21,24 @@ const nextConfig: NextConfig = {
             destination: '/dashboard/insights'
         },
         {
+            source: '/transaction-requests',
+            destination: '/dashboard/transaction-requests'
+        },
+        {
+            source: '/change-in-bank-balances',
+            destination: '/dashboard/change-in-bank-balances'
+        },
+        {
             source: '/cash',
             destination: '/dashboard/cash'
         },
         {
             source: '/cash/accounts',
             destination: '/dashboard/cash/accounts'
+        },
+        {
+            source: '/cash/change-in-cash',
+            destination: '/dashboard/cash/change-in-cash'
         },
         {
             source: '/bank-transactions',

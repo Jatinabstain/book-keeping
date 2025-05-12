@@ -15,10 +15,10 @@ export const menuData: MenuItem[] = [
         children: [],
     },
     {
-        slug: "task",
-        icon: "fi fi-rr-list-check",
-        label: "Task",
-        href: "/task",
+        slug: "todo-list",
+        icon: "fi fi-rr-list-timeline",
+        label: "To-Do List",
+        href: "/todo-list",
         children: [],
     },
     {
@@ -38,6 +38,12 @@ export const menuData: MenuItem[] = [
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Insights",
                 href: "/insights",
+            },
+            {
+                slug: "change-in-bank-balances",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Change in Bank Balances",
+                href: "/change-in-bank-balances",
             },
             {
                 slug: "#",
@@ -66,10 +72,10 @@ export const menuData: MenuItem[] = [
                 href: "/cash/accounts",
             },
             {
-                slug: "#",
+                slug: "change-in-cash",
                 icon: "fi fi-rr-angle-double-small-right",
                 label: "Change in Cash",
-                href: "#",
+                href: "/cash/change-in-cash",
             },
             {
                 slug: "#",

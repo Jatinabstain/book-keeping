@@ -81,7 +81,7 @@ export default function Insights() {
             <div className="bg-white p-4 mb-5 shadow">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-lg font-semibold text-gray-800">Subscriptions & Recurring Expenses</h2>
-                    <select className="border border-gray-300 rounded-md p-2">
+                    <select className="border border-gray-300 p-2">
                         <option value="all">All Categories</option>
                         <option value="subscriptions">Subscriptions</option>
                         <option value="recurring-expenses">Recurring Expenses</option>
