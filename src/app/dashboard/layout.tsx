@@ -17,7 +17,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <header className="lg:hidden sticky top-0 bg-white flex justify-between items-center px-4 py-2 shadow z-10 w-full">
                 <Link href="/dashboard">
                     <Image
-                        src="next.svg"
+                        src="/logo.png"
                         alt="Logo"
                         width={120}
                         height={100}
@@ -40,7 +40,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <div className="flex justify-between items-center p-4 bg-white">
                     <Link href="/dashboard">
                         <Image
-                            src="next.svg"
+                            src="/logo.png"
                             alt="Logo"
                             width={120}
                             height={100}
@@ -69,7 +69,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <div className="flex">
                 <Sidebar />
                 <main className="flex-1 flex flex-col">
-                    <div className="flex-1 pb-8">
+                    <div className="flex-1 pb-8 min-h-screen">
                         {children}
                     </div>
 

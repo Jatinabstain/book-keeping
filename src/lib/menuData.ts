@@ -100,6 +100,51 @@ export const menuData: MenuItem[] = [
         children: [],
     },
     {
+        slug: "#",
+        icon: "fi fi-rr-code-pull-request",
+        label: "Requests",
+        href: "#",
+        children: [
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Request VAT Return",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Request Payroll",
+                href: "#",
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Request MBR Annual Return",
+                href: "#"
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Request Financial Audit",
+                href: "#"
+            },
+            {
+                slug: "#",
+                icon: "fi fi-rr-angle-double-small-right",
+                label: "Request Tax Return",
+                href: "#"
+            },
+        ],
+    },
+    {
+        slug: "document-organizer",
+        icon: "fi fi-rr-settings-sliders",
+        label: "Document Organizer",
+        href: "/document-organizer",
+        children: [],
+    },
+    {
         slug: "settings",
         icon: "fi fi-rr-settings-sliders",
         label: "Settings",

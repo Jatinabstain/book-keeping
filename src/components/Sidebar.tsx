@@ -14,7 +14,7 @@ export default function Sidebar() {
                 <div className="navigation logo p-4">
                     <Link href="/dashboard">
                         <Image
-                            src="/next.svg"
+                            src="/logo.png"
                             alt="Logo"
                             width={120}
                             height={100}

@@ -3,7 +3,7 @@ import ProfitLossTable from "@/components/ProfitLossTable";
 
 export default function FinancialStatements() {
     return ( 
-        <section className="mx-auto max-w-[1400px] px-[15px] w-full pt-8">
+        <section className="mx-auto lg:max-w-[1400px] max-w-lvh  px-[15px] w-full pt-8">
             <h1 className="text-xl font-semibold mb-4">Financial Statements</h1>
             <ReportTabs />
             

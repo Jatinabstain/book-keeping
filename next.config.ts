@@ -49,6 +49,10 @@ const nextConfig: NextConfig = {
             destination: '/dashboard/tax'
         },
         {
+            source: '/document-organizer',
+            destination: '/dashboard/document-organizer'
+        },
+        {
             source: '/settings',
             destination: '/dashboard/settings'
         },
