@@ -47,7 +47,7 @@ export default function TransactionRequests() {
                         </select>
                     </form>
                     {/* price */}
-                    <p className="font-bold text-lg text-primary">$5,600</p>
+                    <p className="font-bold text-lg text-primary">€5,600</p>
                 </div>
                 <div className="p-6">
                     <div className="overflow-auto">
@@ -64,7 +64,7 @@ export default function TransactionRequests() {
                                 <td className="text-end">
                                     <div className="flex gap-4 justify-end items-center">
                                         <div>
-                                            <span className="block text-black font-semibold">$5,600</span>
+                                            <span className="block text-black font-semibold">€5,600</span>
                                             <small className="text-primary">Expense</small>
                                         </div>
                                         <Link href="#">

@@ -5,10 +5,10 @@ import PLSummaryChart from '@/components/PLSummaryChart';
 
 export default function DashboardPage() {
     const stats = [
-        { title: 'Revenue', amount: '$59,212.52', change: '+12%', note: 'Oct 2024 vs prior month' },
-        { title: 'Net income', amount: '$17,560.45', change: '+10%', note: 'Oct 2024 vs prior month' },
-        { title: 'Cash balance', amount: '$42,135.75', change: '+8%', note: 'Today vs 30 days ago' },
-        { title: 'Card balance', amount: '$5,340.25', change: '-10%', note: 'Today vs 30 days ago' },
+        { title: 'Revenue', amount: '€59,212.52', change: '+12%', note: 'Oct 2024 vs prior month' },
+        { title: 'Net income', amount: '€17,560.45', change: '+10%', note: 'Oct 2024 vs prior month' },
+        { title: 'Cash balance', amount: '€42,135.75', change: '+8%', note: 'Today vs 30 days ago' },
+        { title: 'Card balance', amount: '€5,340.25', change: '-10%', note: 'Today vs 30 days ago' },
     ];
 
     return (
@@ -44,7 +44,7 @@ export default function DashboardPage() {
                     </div>
                     <div className="flex items-center space-x-2 hover:bg-primary p-1 rounded-md transition-all duration-200">
                         <i className="fi fi-rr-usd-circle text-white text-lg"></i>
-                        <span className="text-xs text-white font-medium">Give $500, <span className="font-bold">get $500</span></span>
+                        <span className="text-xs text-white font-medium">Give €500, <span className="font-bold">get €500</span></span>
                     </div>
                 </div>
             </div>

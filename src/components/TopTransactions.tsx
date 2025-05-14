@@ -53,7 +53,7 @@ export default function TopTransactions() {
                     transaction.amount < 0 ? 'text-[#b11107]' : 'text-[#00799c]'
                 }`}
             >
-                ${Math.abs(transaction.amount).toLocaleString()}
+                €{Math.abs(transaction.amount).toLocaleString()}
             </div>
         </div>
     ))}

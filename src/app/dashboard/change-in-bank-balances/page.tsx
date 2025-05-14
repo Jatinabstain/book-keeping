@@ -10,7 +10,7 @@ const bankData = [
 ];
 
 const formatCurrency = (amount: number) =>
-    `$${amount.toLocaleString('en-US')}`;
+    `€${amount.toLocaleString('en-US')}`;
 
 export default function ChangeInBankBalancesPage() {
     const totalOpening = bankData.reduce((sum, b) => sum + b.opening, 0);

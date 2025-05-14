@@ -142,7 +142,7 @@ export default function MetricsTable() {
                   </td>
                   {filteredIndexes.map((i) => (
                     <td key={i} className="p-3 px-8 text-right border-gray-100 text-gray-700 border-bottomz">
-                      ${metricsData[metric][i]?.toLocaleString() || '—'}
+                      €{metricsData[metric][i]?.toLocaleString() || '—'}
                     </td>
                   ))}
                 </tr>

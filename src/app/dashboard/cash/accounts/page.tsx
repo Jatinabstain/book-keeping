@@ -30,7 +30,7 @@ export default function Accounts() {
                     {/* Total Balance */}
                     <div className="flex justify-between items-center">
                         <h3 className="text-base font-semibold text-gray-800">Total Balance</h3>
-                        <span className="text-xl font-semibold text-green-600">$472,375.48</span>
+                        <span className="text-xl font-semibold text-green-600">€472,375.48</span>
                     </div>
 
                     <hr className="my-4 opacity-15" />
@@ -49,7 +49,7 @@ export default function Accounts() {
                                         <p className="text-xs text-gray-400 m-0">Updated 14 days ago</p>
                                     </div>
                                 </div>
-                                <span className="text-base font-semibold text-primary">$459,062.49</span>
+                                <span className="text-base font-semibold text-primary">€459,062.49</span>
                             </li>
                             <li className="flex items-center justify-between py-3 ">
                                 <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export default function Accounts() {
                                         <p className="text-xs text-gray-400 m-0">Updated 12 days ago</p>
                                     </div>
                                 </div>
-                                <span className="text-base font-semibold text-primary">$13,312.99</span>
+                                <span className="text-base font-semibold text-primary">€13,312.99</span>
                             </li>
                         </ul>
                     </div>
@@ -85,7 +85,7 @@ export default function Accounts() {
                                         <p className="text-xs text-gray-400">Updated 14 days ago</p>
                                     </div>
                                 </div>
-                                <span className="text-base font-semibold text-primary">$0.00</span>
+                                <span className="text-base font-semibold text-primary">€0.00</span>
                             </li>
                         </ul>
                     </div>
@@ -104,7 +104,7 @@ export default function Accounts() {
                         <div className="flex justify-between">
                             <h3 className="text-xl font-semibold">Total Balance</h3>
                             <div className="text-end">
-                                <span className="text-xl block font-semibold">$472,375.48</span>
+                                <span className="text-xl block font-semibold">€472,375.48</span>
                                 <span className="items-end px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary text-white">
                                     Estimated
                                 </span>

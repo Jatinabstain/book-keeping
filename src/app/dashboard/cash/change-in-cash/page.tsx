@@ -11,7 +11,7 @@ const bankData = [
 ];
 
 const formatCurrency = (amount: number) =>
-    `$${amount.toLocaleString('en-US')}`;
+    `€${amount.toLocaleString('en-US')}`;
 
 export default function ChangeInCashPage() {
     const totalOpening = bankData.reduce((sum, b) => sum + b.opening, 0);
@@ -35,7 +35,7 @@ export default function ChangeInCashPage() {
                 </div>
                 <div className="border border-neutral-200 bg-white p-4">
                     <p className="text-xs text-neutral-500 uppercase mb-1">Change in Cash (Month-to-Date)</p>
-                    <p className="text-lg font-semibold text-neutral-800">$0.00
+                    <p className="text-lg font-semibold text-neutral-800">€0.00
                         <span className="ms-3 items-end px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-primary text-white">Estimated</span>
                     </p>
                 </div>
@@ -61,39 +61,39 @@ export default function ChangeInCashPage() {
                             <tbody>
                                 <tr>
                                     <th className="px-4 py-3 text-center">Change in Cash</th>
-                                    <td className="px-4 py-3 text-center">$25, 031</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$94, 842</td>
-                                    <td className="px-4 py-3 text-center">$16, 136</td>
-                                    <td className="px-4 py-3 text-center">$17, 871</td>
-                                    <td className="px-4 py-3 text-center">$14, 646</td>
+                                    <td className="px-4 py-3 text-center">€25, 031</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€94, 842</td>
+                                    <td className="px-4 py-3 text-center">€16, 136</td>
+                                    <td className="px-4 py-3 text-center">€17, 871</td>
+                                    <td className="px-4 py-3 text-center">€14, 646</td>
                                     <td className="px-4 py-3 text-center">-</td>
                                 </tr>
                                 <tr>
                                     <td className="px-4 py-3 text-center">Cash in</td>
-                                    <td className="px-4 py-3 text-center">$56, 448</td>
-                                    <td className="px-4 py-3 text-center">$85, 966</td>
-                                    <td className="px-4 py-3 text-center">$94, 383</td>
-                                    <td className="px-4 py-3 text-center">$120, 283</td>
-                                    <td className="px-4 py-3 text-center">$124, 438</td>
+                                    <td className="px-4 py-3 text-center">€56, 448</td>
+                                    <td className="px-4 py-3 text-center">€85, 966</td>
+                                    <td className="px-4 py-3 text-center">€94, 383</td>
+                                    <td className="px-4 py-3 text-center">€120, 283</td>
+                                    <td className="px-4 py-3 text-center">€124, 438</td>
                                     <td className="px-4 py-3 text-center">-</td>
                                 </tr>
                                 <tr>
                                     <td className="px-4 py-3 text-center">Cash out</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$31, 416</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$180, 818</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$78, 247</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$120, 421</td>
-                                    <td className="px-4 py-3 text-center text-red-800">-$109, 792</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€31, 416</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€180, 818</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€78, 247</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€120, 421</td>
+                                    <td className="px-4 py-3 text-center text-red-800">-€109, 792</td>
                                     <td className="px-4 py-3 text-center">-</td>
                                 </tr>
                                 <tr>
                                     <th className="px-4 py-3 text-center text-black">Ending Bank Balance</th>
-                                    <th className="px-4 py-3 text-center text-black">$505, 261.18</th>
-                                    <th className="px-4 py-3 text-center text-black">$410, 408.73</th>
-                                    <th className="px-4 py-3 text-center text-black">$426, 545.21</th>
-                                    <th className="px-4 py-3 text-center text-black">$444, 416.25</th>
-                                    <th className="px-4 py-3 text-center text-black">$459, 062.49</th>
-                                    <th className="px-4 py-3 text-center text-black">$459, 062.49</th>
+                                    <th className="px-4 py-3 text-center text-black">€505, 261.18</th>
+                                    <th className="px-4 py-3 text-center text-black">€410, 408.73</th>
+                                    <th className="px-4 py-3 text-center text-black">€426, 545.21</th>
+                                    <th className="px-4 py-3 text-center text-black">€444, 416.25</th>
+                                    <th className="px-4 py-3 text-center text-black">€459, 062.49</th>
+                                    <th className="px-4 py-3 text-center text-black">€459, 062.49</th>
                                 </tr>
                             </tbody>
                         </table>

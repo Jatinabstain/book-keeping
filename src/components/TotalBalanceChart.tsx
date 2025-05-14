@@ -89,7 +89,7 @@ export default function CashFlowChart() {
                             if (name === 'change') {
                                 return `${(Number(safeValue) * 100).toFixed(1)}%`;
                             } else {
-                                return `$${safeValue.toLocaleString()}`;
+                                return `€${safeValue.toLocaleString()}`;
                             }
                         }}
                     />

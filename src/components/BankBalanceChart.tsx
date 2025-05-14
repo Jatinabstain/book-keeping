@@ -51,7 +51,7 @@ export default function BankBalanceChart() {
               fontSize: '0.85rem',
               boxShadow: '0 4px 12px rgba(0,0,0,0.06)',
             }}
-            formatter={(value) => `$${value.toLocaleString()}`}
+            formatter={(value) => `€${value.toLocaleString()}`}
           />
           <Legend
             iconType="circle"
@@ -72,7 +72,7 @@ export default function BankBalanceChart() {
             radius={[8, 8, 0, 0]}
             barSize={16}
           >
-            <LabelList dataKey="bank" position="top" formatter={(val: number) => `$${val.toLocaleString()}`} />
+            <LabelList dataKey="bank" position="top" formatter={(val: number) => `€${val.toLocaleString()}`} />
           </Bar>
 
           <Bar
@@ -82,7 +82,7 @@ export default function BankBalanceChart() {
             radius={[8, 8, 0, 0]}
             barSize={16}
           >
-            <LabelList dataKey="credit" position="top" formatter={(val: number) => `$${val.toLocaleString()}`} />
+            <LabelList dataKey="credit" position="top" formatter={(val: number) => `€${val.toLocaleString()}`} />
           </Bar>
 
           <Line

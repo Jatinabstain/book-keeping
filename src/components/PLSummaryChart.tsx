@@ -81,7 +81,7 @@ export default function PnLChart() {
                             if (name === 'change') {
                                 return `${(Number(safeValue) * 100).toFixed(1)}%`;
                             } else {
-                                return `₹${safeValue.toLocaleString()}`;
+                                return `€${safeValue.toLocaleString()}`;
                             }
                         }}
                     />

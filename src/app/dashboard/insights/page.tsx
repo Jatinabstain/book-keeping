@@ -40,7 +40,7 @@ export default function Insights() {
             logo: "stripe.svg",
             change: "+12%",
             changeColor: "green",
-            amount: "$30,000",
+            amount: "€30,000",
         },
         {
             name: "Pamela Chavez",
@@ -48,7 +48,7 @@ export default function Insights() {
             logo: "next.svg",
             change: "-2%",
             changeColor: "red",
-            amount: "$10,000",
+            amount: "€10,000",
         },
     ];
 
