@@ -9,7 +9,7 @@ export default function LoginPage() {
                     <div className="login_card bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
                         <div className="login_card_header flex flex-col items-center mb-6">
                             <Image
-                                src="/next.svg"
+                                src="/logo-main.png"
                                 alt="logo"
                                 width={120}
                                 height={120}
