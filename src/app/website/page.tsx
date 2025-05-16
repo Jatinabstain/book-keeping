@@ -1,4 +1,6 @@
 import FeatureSection from "@/components/website/FeatureSection";
+import FinalCTA from "@/components/website/FinalCTA";
+import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import HowItWorksSteps from "@/components/website/HowItWorkSteps";
 import HowItWorks from "@/components/website/HowItWorkVideo";
@@ -20,7 +22,9 @@ export default function Website() {
       <HowItWorksSteps />
       <KeyFeatures />
       <RequestService />
-      {/* <WhyChooseUs /> */}
+      <WhyChooseUs />
+      <FinalCTA />
+      <Footer />
     </>
   );
 }
