@@ -43,7 +43,7 @@ export default function HowItWorks() {
                             </button>
                             <iframe
                                 className="w-full h-full rounded-lg"
-                                src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                                src="https://www.youtube.com/embed/gCWfy4sYzWs"
                                 title="How it works video"
                                 allowFullScreen
                             ></iframe>

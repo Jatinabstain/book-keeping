@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const navItems = [
-    { label: "Why Vacei?", icon: "fi fi-rr-star", href: "#" },
+    { label: "Why Vacei?", icon: "fi fi-rr-star", href: "/website/why-vacei" },
     { label: "Services", icon: "fi fi-rr-apps", href: "#" },
     { label: "Marketplace", icon: "fi fi-rr-briefcase", href: "#" },
     { label: "Pricing", icon: "fi fi-rr-users-alt", href: "#" },
@@ -19,7 +19,7 @@ export default function Header() {
         <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center h-16 text-base">
                 {/* Logo */}
-                <Link href="#">
+                <Link href="/website">
                     <Image
                         src="/logo-main.png"
                         alt="Vacei Logo"
