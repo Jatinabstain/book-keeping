@@ -4,6 +4,17 @@ import Footer from "@/components/website/Footer"
 import Header from "@/components/website/Header"
 import { CheckCircle } from 'lucide-react'
 import Link from "next/link"
+import {
+    Banknote,
+    ShieldCheck,
+    Calculator,
+    Percent,
+    HandCoins,
+    ChartArea,
+    Landmark,
+    UserCheck,
+    Ellipsis,
+} from 'lucide-react'
 
 import {
     BookOpenCheck,
@@ -17,86 +28,135 @@ import {
 
 const services = [
     {
-        name: 'Real Bookkeeping, Done For You',
+        name: 'Finance & Compliance',
         icon: BookOpenCheck,
         services: [
-            "We don't just give you software - we do the work.",
-            'Your books are managed by real professionals and updated monthly.',
-            'No need to learn accounting or manage spreadsheets again.',
+            "Transfer Pricing Reports",
+            "Financial Forecasting",
+            "Internal Controls Setup",
+            "Budgeting & Management Reports"
         ],
     },
     {
-        name: 'Total Visibility',
+        name: 'Legal & Corporate',
         icon: BarChart3,
         services: [
-            "Instantly view what's posted, pending, or needs review.",
-            'Raise queries directly in your dashboard.',
-            'Download audit-ready reports anytime.'
+            "Company Formation (Local & International)",
+            "KYC / AML Checks",
+            "GDPR Compliance Audits",
+            "Trademark Registration",
+            "Legal Document Drafting",
+            "Shareholder Agreements"
         ],
     },
     {
-        name: 'QuickBooks Sync',
+        name: 'HR & Employer Services',
         icon: RefreshCcw,
         services: [
-            'We set up QuickBooks for you (included in every plan).',
-            'All your documents and transactions sync automatically.',
-            'No more switching between tools.'
+            "Employment Contracts",
+            "HR Policies & Manuals",
+            "Work Visa Assistance",
+            "Payroll Outsourcing",
+            "Remote Hiring Support"
         ],
     },
     {
-        name: 'Talk to a Real Accountant, Anytime',
+        name: 'Cybersecurity & IT',
         icon: MessageCircle,
         services: [
-            'Built-in live chat inside your dashboard.',
-            'Book a Zoom call when you need it - no ticketing, no delays.',
-            'Get answers in plain English, not accounting jargon.'
+            "ISO 27001 / 9001 Certification",
+            "Data Security Audits",
+            "Penetration Testing",
+            "IT Infrastructure Setup",
+            "Cloud Migration Support",
+            "SaaS Application Consulting"
         ],
     },
     {
-        name: 'Request Any Business Service',
+        name: 'Business Strategy & Advisory',
         icon: BadgeCheck,
         services: [
-            'Need payroll, VAT returns, audits, or ISO certification?',
-            'Request from your dashboard with one click.',
-            "Choose to work with Vacei's internal team or get offers from verified partners."
+            "Pitch Deck Reviews",
+            "Business Plan Creation",
+            "Investor Reporting",
+            "Market Research",
+            "Expansion Strategy",
+            "Due Diligence Reports"
         ],
     },
     {
-        name: 'Built for Modern, Global Businesses',
+        name: 'Marketing & Creative',
         icon: Globe2,
         services: [
-            "Whether you're a solo founder or managing multiple entities — Vacei grows with you.",
-            'Handle filings, compliance, and service requests across countries.',
-            'Expand faster, with everything centralized in your portal.'
+            "Website Development",
+            "Social Media Management",
+            "Paid Ad Campaigns (Google, Facebook, LinkedIn)",
+            "SEO Audits & Content Strategy",
+            "Graphic Design & Branding",
+            "Video Commercials",
+            "Email Marketing Automation"
         ],
     },
     {
-        name: 'One Platform, Endless Value',
+        name: 'All From Your Dashboard',
         icon: Layers3,
         services: [
             "Bookkeeping",
-            'VAT Returns',
-            'MBR Filings',
-            "Payroll & Tax Returns",
+            "VAT Returns",
+            "Payroll",
+            "Tax Return Filing",
+            "MBR Filings",
+            "Audit Preparation",
+            "CFO Services",
             "Incorporations",
-            'Cybersecurity Audits',
-            "ISO Certifications",
-            "CFO & Business Advisory",
-            "Residency Scheme Support",
-            "And more - all visible, tracked, and organized in one dashboard."
+            "ISO Certification",
+            "GDPR Audits",
+            "Legal Support",
+            "Marketing & IT",
+            "Strategic Planning"
         ],
     },
 ];
 
-const features = [
-    'Faster setup - live in under 2 minutes',
-    'Human support - expert help, always included.',
-    'Scales with you - from freelancer to international business.',
-    'Secure & compliant - GDPR-ready, with audit trails built in.',
-    'Verified partner network - legal, tax, ISO, and more'
-];
+const servicesCore = [
+    {
+        icon: Calculator,
+        title: 'Bookkeeping',
+        description: 'Daily postings, reconciliations, and monthly reports - audit-ready, always.',
+    },
+    {
+        icon: Percent,
+        title: 'VAT Returns',
+        description: 'We prepare and submit your VAT return on time, with full supporting documentation.',
+    },
+    {
+        icon: HandCoins,
+        title: 'Payroll Processing',
+        description: 'Run compliant payroll, generate payslips, and handle tax submissions with ease.',
+    },
+    {
+        icon: Banknote,
+        title: 'Tax Return Filing',
+        description: 'Corporate tax return submissions handled by licensed experts.',
+    },
+    {
+        icon: ChartArea,
+        title: 'MBR Filings',
+        description: 'We take care of any filing requirements related to the Malta Business Registry.',
+    },
+    {
+        icon: Landmark,
+        title: 'Audit Preparation',
+        description: 'We prepare and organize your financials for a smooth audit experience.',
+    },
+    {
+        icon: ShieldCheck,
+        title: 'CFO Services',
+        description: 'On-demand strategic financial guidance, cash flow analysis, investor reporting, and performance insights.',
+    },
+]
 
-export default function WhyVacei() {
+export default function Services() {
     return (
         <>
             <Header />
@@ -105,11 +165,11 @@ export default function WhyVacei() {
                     <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
                         {/* Heading Section */}
                         <div className="lg:max-w-4/6 w-full">
-                            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">Why Vacei?</h1>
+                            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">Vacei Services</h1>
                             <p className="mt-4 mb-1 text-neutral-900 font-semibold text-lg">
-                                The smarter way to manage your business — all in one place.
+                                Everything Your Business Needs - All in One Place
                             </p>
-                            <p className="text-neutral-800">Vacei is more than just a bookkeeping tool. It's a centralized platform for financial clarity, compliance, and business growth. Built for founders, teams, and businesses ready to simplify operations and scale faster.</p>
+                            <p className="text-neutral-800">From expert bookkeeping to ISO certification, marketing, legal help, and more — Vacei brings together core financial services and a wide range of verified partners, all managed from one powerful dashboard.</p>
                         </div>
 
                         {/* Optional: Add image or illustration here */}
@@ -122,8 +182,48 @@ export default function WhyVacei() {
                         </div>
                     </div>
                 </section>
+
+                <section id="why-vacei" className="bg-gray-800 py-10 px-6">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-3xl lg:text-3xl font-bold text-white text-center">Core Services (Handled by the Vacei Team)</h2>
+                        <p className="mb-8 mt-2 text-center font-semibold text-white">Delivered directly by our in-house professionals.</p>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                            {servicesCore.map(({ title, icon: Icon, description }) => (
+                                <div
+                                    key={title}
+                                    className="group bg-white transition hover:shadow-xl rounded-0 p-6 relative overflow-hidden cursor-pointer"
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-[#00799c] text-white p-2.5 rounded-full">
+                                            <Icon className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
+                                                {title}
+                                            </h3>
+                                            <p className="text-neutral-500 text-xs leading-relaxed">{description}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 <section className="bg-gray-50 py-16">
                     <div className="max-w-7xl mx-auto px-4 md:px-6">
+                        <div className="text-center">
+                            <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-4">
+                                Marketplace Services <span className="font-bold text-primary">(Request & Compare Offers)</span>
+                            </h2>
+                            <p className="mt-2 text-gray-800 mx-auto font-semibold">
+                                Request any business service and receive offers from verified partners -
+                            </p>
+                            <p className="mt-2 text-gray-500 mx-auto font-semibold mb-6">
+                                all managed securely in your dashboard.
+                            </p>
+                        </div>
+
                         <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mb-8">
                             {/* First column: large card (spans 2 rows) */}
                             <div className="lg:row-span-2">
@@ -203,22 +303,7 @@ export default function WhyVacei() {
                                 </div>
                             ))}
                         </div>
-
-                    </div>
-                </section>
-
-                <section className="py-10 bg-white">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
-                        <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Our Clients Choose Vacei</h3>
-
-                        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-6xl mx-auto">
-                            {features.map((feature, i) => (
-                                <div key={i} className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-primary mt-1" />
-                                    <p className="text-black text-base">{feature}</p>
-                                </div>
-                            ))}
-                        </div>
+                        <p className="text-black text-center italic text-sm pt-8">Choose to work directly with Vacei or request quotes from verified professionals.</p>
                     </div>
                 </section>
 
@@ -227,10 +312,10 @@ export default function WhyVacei() {
 
                         <div>
                             <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
-                                The modern back office for modern businesses.
+                                Get Started Now
                             </h2>
                             <p className="text-neutral-400 text-lg mt-3">
-                                Ready to focus on growth instead of admin?
+                                Let us simplify your finances and streamline your business needs - all from one platform.
                             </p>
                         </div>
 
@@ -239,13 +324,13 @@ export default function WhyVacei() {
                                 href="#"
                                 className="bg-white text-black font-medium px-6 py-3 shadow hover:bg-neutral-200 transition"
                             >
-                                Get Started Free
+                                Create Free Account
                             </Link>
                             <Link
                                 href="#"
                                 className="border border-white/20 text-white font-medium px-6 py-3 hover:bg-white/10 transition"
                             >
-                                Book a Demo
+                                Request a Demo
                             </Link>
                         </div>
                     </div>

@@ -6,9 +6,9 @@ import Image from "next/image";
 
 const navItems = [
     { label: "Why Vacei?", icon: "fi fi-rr-star", href: "/website/why-vacei" },
-    { label: "Services", icon: "fi fi-rr-apps", href: "#" },
-    { label: "Marketplace", icon: "fi fi-rr-briefcase", href: "#" },
-    { label: "Pricing", icon: "fi fi-rr-users-alt", href: "#" },
+    { label: "Services", icon: "fi fi-rr-apps", href: "/website/services" },
+    { label: "Marketplace", icon: "fi fi-rr-briefcase", href: "/website/marketplace" },
+    { label: "Pricing", icon: "fi fi-rr-users-alt", href: "/website/pricing" },
     { label: "Resources", icon: "fi fi-rr-coins", href: "#" },
 ];
 
