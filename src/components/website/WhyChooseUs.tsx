@@ -2,20 +2,17 @@ import { CheckCircle } from 'lucide-react'
 
 export default function WhyChooseUs() {
   const features = [
-    'Smart bookkeeping meets real accountant support',
-    'Global-ready platform with local compliance built-in',
-    'Transparent pricing, no hidden fees',
-    'Always secure – with document history and audit trail',
-    'Scales with your business (solo to enterprise)',
+    'Smarter than traditional accounting.',
+    'Fully virtual — always human-supported.',
+    'International-ready and scalable.',
+    'Transparent pricing and no lock-ins.',
+    'Fast, secure, and audit-friendly.',
   ]
 
   return (
     <section id="why-choose-us" className="py-10 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6 text-center">
-        <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Choose Us</h3>
-        <p className="mt-4 text-gray-500">
-          A platform that simplifies bookkeeping while supporting your business growth.
-        </p>
+        <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Choose Vacei?</h3>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-3xl mx-auto">
           {features.map((feature, i) => (

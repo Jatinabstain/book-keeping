@@ -145,6 +145,13 @@ export const menuData: MenuItem[] = [
         children: [],
     },
     {
+        slug: "general-ledger",
+        icon: "fi fi-rr-book",
+        label: "General Ledger",
+        href: "/dashboard/general-ledger",
+        children: [],
+    },
+    {
         slug: "settings",
         icon: "fi fi-rr-settings-sliders",
         label: "Settings",

@@ -1,3 +1,4 @@
+import BusinessServices from "@/components/website/BusinessServices";
 import FeatureSection from "@/components/website/FeatureSection";
 import FinalCTA from "@/components/website/FinalCTA";
 import Footer from "@/components/website/Footer";
@@ -6,7 +7,10 @@ import HowItWorksSteps from "@/components/website/HowItWorkSteps";
 import HowItWorks from "@/components/website/HowItWorkVideo";
 import KeyFeatures from "@/components/website/KeyFeatures";
 import RequestService from "@/components/website/RequestService";
+import TrustSecurity from "@/components/website/TrustSecurity";
 import WhyChooseUs from "@/components/website/WhyChooseUs";
+import WhyVacei from "@/components/website/WhyVacei";
+import { Bus } from "lucide-react";
 
 export default function Website() {
   return (
@@ -20,10 +24,13 @@ export default function Website() {
       <FeatureSection />
       <HowItWorks />
       <HowItWorksSteps />
+      <WhyVacei />
       <KeyFeatures />
+      <BusinessServices />
       <RequestService />
       <WhyChooseUs />
       <FinalCTA />
+      <TrustSecurity />
       <Footer />
     </>
   );

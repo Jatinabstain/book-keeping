@@ -7,10 +7,9 @@ import Image from "next/image";
 const navItems = [
     { label: "Why Vacei?", icon: "fi fi-rr-star", href: "#" },
     { label: "Services", icon: "fi fi-rr-apps", href: "#" },
-    { label: "Industries", icon: "fi fi-rr-briefcase", href: "#" },
-    { label: "Customers", icon: "fi fi-rr-users-alt", href: "#" },
-    { label: "Pricing", icon: "fi fi-rr-coins", href: "#" },
-    { label: "Resources", icon: "fi fi-rr-book", href: "#" },
+    { label: "Marketplace", icon: "fi fi-rr-briefcase", href: "#" },
+    { label: "Pricing", icon: "fi fi-rr-users-alt", href: "#" },
+    { label: "Resources", icon: "fi fi-rr-coins", href: "#" },
 ];
 
 export default function Header() {
@@ -35,7 +34,7 @@ export default function Header() {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="flex items-center gap-2 text-gray-700"
+                            className="flex items-center gap-2 text-gray-700 text-[15px]"
                         >
                             {/* <i className={`${item.icon} text-base`}></i> */}
                             {item.label}
@@ -47,16 +46,22 @@ export default function Header() {
                 <div className="hidden lg:flex items-center gap-4  text-base">
                     <Link
                         href="#"
-                        className="text-gray-600"
+                        className="inline-block bg-gray-800 text-white text-[15px] px-3 py-1.5"
                     >
                         Sign In
+                    </Link>
+                    <Link
+                        href="#"
+                        className="inline-block bg-primary text-white text-[15px] px-3 py-1.5"
+                    >
+                        Get Started Free
                     </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="lg:hidden text-gray-700 hover:text-blue-600 transition"
+                    className="lg:hidden text-gray-700  transition"
                 >
                     <i className={`fi ${open ? "fi-rr-cross" : "fi-rr-menu-burger"} text-2xl`}></i>
                 </button>
@@ -69,7 +74,7 @@ export default function Header() {
                         <Link
                             key={item.label}
                             href={item.href}
-                            className="flex items-center gap-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                            className="flex items-center gap-2 text-gray-700  font-medium transition-colors"
                             onClick={() => setOpen(false)}
                         >
                             <i className={`${item.icon} text-base`}></i>
@@ -79,10 +84,17 @@ export default function Header() {
                     <hr className="border-gray-200" />
                     <Link
                         href="/signin"
-                        className="block text-gray-600 hover:text-blue-600 font-medium transition"
+                        className="block text-gray-600  font-medium transition"
                         onClick={() => setOpen(false)}
                     >
                         Sign In
+                    </Link>
+                    <Link
+                        href="#"
+                        className="block text-gray-600  font-medium transition"
+                        onClick={() => setOpen(false)}
+                    >
+                        Get Started Free
                     </Link>
                 </div>
             )}

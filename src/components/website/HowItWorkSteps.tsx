@@ -2,31 +2,31 @@ export default function HowItWorksSteps() {
     const steps = [
         {
             title: "Sign Up",
-            description: "Sign up for free in 2 minutes and access your personalized dashboard.",
+            description: "Create your free account in under 2 minutes.",
         },
         {
-            title: "Upload Documents",
-            description: "Upload your documents via drag & drop, email, or scanner.",
+            title: "Upload Your Documents",
+            description: "Drag & drop receipts, invoices, bank statements - or email them to us.",
         },
         {
-            title: "Request Services",
-            description: "Request VAT returns, payroll, MBR filings, or audits easily.",
+            title: "We Handle the Bookkeeping",
+            description: "We post, organize, and update your books. You always see the live view.",
         },
         {
-            title: "Expert Response",
-            description: "We connect you to our expert team, who responds within 24 hours.",
+            title: "Track Everything",
+            description: "See what's posted, pending, or needs review. Raise questions instantly.",
         },
         {
-            title: "Track & Review",
-            description: "Review posted items, download reports, or raise queries - all from your portal.",
+            title: "Request Extra Services (Optional)",
+            description: "Need VAT, audit, incorporation, or ISO support? Request directly from your dashboard.",
         },
     ]
 
     return (
-        <section className="bg-white py-10" id="how-it-works-steps">
+        <section className="bg-white pb-10" id="how-it-works-steps">
             <div className="max-w-7xl mx-auto px-4">
-                <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 text-center mb-6">How It Works Steps</h2>
-                <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-8">Steps <i className="fi fi-rr-hand-back-point-right text-xl text-primary"></i></h2>
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {steps.map((step, index) => (
                         <div
                             key={index}

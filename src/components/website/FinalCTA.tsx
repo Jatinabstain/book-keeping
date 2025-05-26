@@ -7,11 +7,11 @@ export default function FinalCTA() {
 
         <div>
           <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
-            Create your free account 
-            <span className="block text-neutral-400">or book a walkthrough.</span>
+            Ready to Simplify Your Business?
+            <span className="block text-neutral-400">Let us handle the books</span>
           </h2>
           <p className="text-neutral-400 text-lg mt-3">
-            Let us handle the books, while you focus on your business.
+            and connect you with everything else.
           </p>
         </div>
 
@@ -26,7 +26,7 @@ export default function FinalCTA() {
             href="#"
             className="border border-white/20 text-white font-medium px-6 py-3 hover:bg-white/10 transition"
           >
-            Request Demo
+            Request a Demo
           </Link>
         </div>
       </div>
