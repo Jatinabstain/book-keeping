@@ -7,38 +7,38 @@ export default function PricingSection() {
     return (
         <section className="relative pt-5  pb-10 bg-gradient-to-b from-white via-gray-50 to-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-6">
                     {/* Essential Bookkeeping */}
                     <div className="relative p-4 bg-white border border-gray-200  shadow-xl transition hover:shadow-2xl">
                         <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Essential Bookkeeping</h3>
-                        <p className="text-gray-500 text-sm mb-4">Ideal for startups and growing businesses.</p>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">Essential Bookkeeping</h3>
+                        <p className="text-gray-600 text-sm">Ideal for startups and growing businesses.</p>
                         <p className="text-gray-600 text-sm mb-6">We post, organize, and reconcile your financial documents, giving you clean books each month.</p>
 
                         <div className="mb-6">
-                            <table className="w-full text-sm text-left border border-gray-100 overflow-hidden">
-                                <thead className="bg-gray-100 text-gray-700">
+                            <table className="w-full text-sm text-left border border-gray-200 overflow-hidden">
+                                <thead className="bg-gray-50 text-gray-700">
                                     <tr>
-                                        <th className="p-3">Monthly Documents</th>
-                                        <th className="p-3">Monthly Price (EUR)</th>
+                                        <th className="p-2 text-xs border border-gray-200">Monthly Documents</th>
+                                        <th className="p-2 text-xs border border-gray-200">Monthly Price (EUR)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 250</td>
-                                        <td className="p-3">€99/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 250</td>
+                                        <td className="text-xs p-2 border border-gray-200">€99/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 500</td>
-                                        <td className="p-3">€129/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 500</td>
+                                        <td className="text-xs p-2 border border-gray-200">€129/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 1000</td>
-                                        <td className="p-3">€199/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 1000</td>
+                                        <td className="text-xs p-2 border border-gray-200">€199/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">1000+</td>
-                                        <th className="p-3 text-primary font-semibold">Contact Us</th>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">1000+</td>
+                                        <th className="text-xs p-2 border border-gray-200 text-primary font-semibold">Contact Us</th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -68,33 +68,33 @@ export default function PricingSection() {
                     {/* Core Accounting */}
                     <div className="relative p-4 bg-white border border-gray-200  shadow-xl transition hover:shadow-2xl">
                         <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Core Accounting</h3>
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">Core Accounting</h3>
                         <p className="text-gray-600 text-sm mb-6">Perfect for businesses needing advanced financial reporting and full accounting support.</p>
 
                         <div className="mb-6">
-                            <table className="w-full text-sm text-left border border-gray-100 overflow-hidden">
-                                <thead className="bg-gray-100 text-gray-700">
+                            <table className="w-full text-sm text-left border border-gray-200 overflow-hidden">
+                                <thead className="bg-gray-50 text-gray-700">
                                     <tr>
-                                        <th className="p-3">Monthly Documents</th>
-                                        <th className="p-3">Monthly Price (EUR)</th>
+                                        <th className="p-2 text-xs border border-gray-200">Monthly Documents</th>
+                                        <th className="p-2 text-xs border border-gray-200">Monthly Price (EUR)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 250</td>
-                                        <td className="p-3">€249/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 250</td>
+                                        <td className="text-xs p-2 border border-gray-200">€249/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 500</td>
-                                        <td className="p-3">€329/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 500</td>
+                                        <td className="text-xs p-2 border border-gray-200">€329/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">Up to 1000</td>
-                                        <td className="p-3">€499/month</td>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">Up to 1000</td>
+                                        <td className="text-xs p-2 border border-gray-200">€499/month</td>
                                     </tr>
-                                    <tr className="border-t">
-                                        <td className="p-3">1000+</td>
-                                        <th className="p-3 text-primary font-semibold">Contact Us</th>
+                                    <tr>
+                                        <td className="text-xs p-2 border border-gray-200">1000+</td>
+                                        <th className="text-xs p-2 border border-gray-200 text-primary font-semibold">Contact Us</th>
                                     </tr>
                                 </tbody>
                             </table>
@@ -118,12 +118,12 @@ export default function PricingSection() {
                             <ArrowRight className="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                     </div>
-                    
+
                     {/* Add-On Services (Available on Request) */}
                     <div className="relative p-4 bg-white border border-gray-200  shadow-xl transition hover:shadow-2xl">
                         <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-6">Add-On Services (Available on Request)</h3>
-                    
+                        <h3 className="text-lg font-semibold text-gray-900 mb-2">Add-On Services <span className="font-normal text-sm text-red-700">(Available on Request)</span></h3>
+
                         <ul className="text-sm text-gray-700 space-y-2 mb-6 leading-relaxed">
                             <li>MBR Filings (any filings with the Malta Business Registry)</li>
                             <li>Tax Return Submission</li>
@@ -136,13 +136,13 @@ export default function PricingSection() {
                         </ul>
                         <p className="italic">All services requested and completed are permanently stored in your dashboard for easy access and record-keeping.</p>
                     </div>
-                    
+
                     {/* Business Marketplace (Included) */}
                     <div className="relative p-4 bg-white border border-gray-200  shadow-xl transition hover:shadow-2xl">
                         <div className="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-                        <h3 className="text-2xl font-semibold text-gray-900 mb-3">Business Marketplace (Included)</h3>
-                        <p className="text-gray-600 text-sm mb-6">Post service requests, get matched with verified providers, and manage everything from your dashboard.</p>
-                    
+                        <h3 className="text-lg font-semibold text-gray-900 mb-3">Business Marketplace <span className="font-normal text-sm text-red-700">(Included)</span></h3>
+                        <p className="text-gray-600 text-sm mb-4">Post service requests, get matched with verified providers, and manage everything from your dashboard.</p>
+
                         <ul className="text-sm text-gray-700 space-y-2 mb-6 leading-relaxed">
                             <li>Unlimited service requests</li>
                             <li>Chat & Zoom integration</li>

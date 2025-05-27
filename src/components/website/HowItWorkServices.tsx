@@ -1,30 +1,30 @@
 import {
-    FileEdit,
-    Clock,
-    BadgeCheck,
-    MessageCircleMore,
+    ClipboardEdit,
+    CalendarClock,
+    ShieldCheck,
+    MessagesSquare,
     UserCheck
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function HowItWorkServices() {
     const features = [
         {
-            icon: FileEdit,
+            icon: ClipboardEdit,
             title: 'Post a Requirement',
             desc: 'Describe the service you need (e.g., ISO certification, VAT returns, residency application).',
         },
         {
-            icon: Clock,
+            icon: CalendarClock,
             title: 'Set Deadline & Upload Files',
             desc: 'Set your timeline, priority, and upload supporting documents.',
         },
         {
-            icon: BadgeCheck,
+            icon: ShieldCheck,
             title: 'Receive Verified Offers',
             desc: 'Get proposals with timelines, pricing, and credentials from verified professionals.',
         },
         {
-            icon: MessageCircleMore,
+            icon: MessagesSquare,
             title: 'Chat & Meet',
             desc: 'Use our secure in-platform messaging and schedule Zoom meetings without sharing personal contact details.',
         },

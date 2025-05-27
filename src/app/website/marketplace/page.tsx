@@ -6,25 +6,23 @@ import Link from "next/link"
 import { CheckCircle } from 'lucide-react'
 
 import {
-    BookOpenCheck,
-    BarChart3,
-    RefreshCcw,
-    MessageCircle,
-    BadgeCheck,
-    Globe2,
-    Layers3,
-    FileUp,
-    Video,
-    History,
-    Star,
-    ShieldAlert
-} from 'lucide-react';
+    FileText,
+    Scale,
+    UserCog,
+    Lightbulb,
+    UploadCloud,
+    CalendarCheck2,
+    FileClock,
+    ThumbsUp,
+    ShieldCheck
+} from "lucide-react";
+
 import HowItWorkServices from "@/components/website/HowItWorkServices"
 
 const services = [
     {
         name: 'Finance & Tax',
-        icon: BookOpenCheck,
+        icon: FileText,
         services: [
             "CFO-as-a-Service",
             "Budgeting & Forecasts",
@@ -34,7 +32,7 @@ const services = [
     },
     {
         name: 'Legal & Compliance',
-        icon: BarChart3,
+        icon: Scale,
         services: [
             "Company Formations",
             "GDPR & AML Compliance",
@@ -47,7 +45,7 @@ const services = [
     },
     {
         name: 'HR & Payroll',
-        icon: RefreshCcw,
+        icon: UserCog,
         services: [
             "Employment Contracts",
             "Payroll Setup & Reporting",
@@ -57,7 +55,7 @@ const services = [
     },
     {
         name: 'Cybersecurity & IT',
-        icon: MessageCircle,
+        icon: ShieldCheck,
         services: [
             "ISO 27001 / ISO 9001 Certification",
             "Cybersecurity Risk Assessments",
@@ -67,7 +65,7 @@ const services = [
     },
     {
         name: 'Strategy & Marketing',
-        icon: BadgeCheck,
+        icon: Lightbulb,
         services: [
             "Business Plans & Pitch Decks",
             "Digital Marketing & SEO",
@@ -80,23 +78,23 @@ const services = [
 
 const servicesCore = [
     {
-        icon: FileUp,
+        icon: UploadCloud,
         title: 'File Upload & Sharing per request'
     },
     {
-        icon: Video,
+        icon: CalendarCheck2,
         title: 'Zoom Integration with calendar links'
     },
     {
-        icon: History,
+        icon: FileClock,
         title: 'Audit Trail: Timestamps and full logs'
     },
     {
-        icon: Star,
+        icon: ThumbsUp,
         title: 'Ratings & Reviews after service delivery'
     },
     {
-        icon: ShieldAlert,
+        icon: ShieldCheck,
         title: 'Safety Tools: Auto-suspend on abuse or flagged behavior'
     },
 ];
@@ -118,7 +116,7 @@ export default function Marketplace() {
                     <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
                         {/* Heading Section */}
                         <div className="lg:max-w-4/6 w-full">
-                            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight">Vacei Marketplace</h1>
+                            <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight">Vacei Marketplace</h1>
                             <p className="mt-4 mb-1 text-neutral-900 font-semibold text-lg">
                                 Your Gateway to Verified Business Services
                             </p>
@@ -153,7 +151,7 @@ export default function Marketplace() {
 
                 <HowItWorkServices />
 
-                <section id="why-vacei" className="bg-gray-800 py-10 px-6">
+                <section id="why-vacei" className="bg-gray-800 py-10 px-4">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-3xl lg:text-3xl font-bold text-white text-center mb-8">Services You Can Request</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -266,22 +264,22 @@ export default function Marketplace() {
                 </section>
 
                 <section className="py-10 bg-white">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
+                    <div className="max-w-7xl mx-auto px-4 text-center">
                         <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Use the Vacei Marketplace?</h3>
 
                         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-7xl mx-auto">
-                        {marketplaces.map((marketplace, i) => (
-                            <div key={i} className="flex items-start gap-3">
-                                <CheckCircle className="w-5 h-5 text-primary mt-1" />
-                                <p className="text-black text-[15px]">{marketplace}</p>
-                            </div>
-                        ))}
+                            {marketplaces.map((marketplace, i) => (
+                                <div key={i} className="flex items-start gap-3">
+                                    <CheckCircle className="w-5 h-5 text-primary mt-1" />
+                                    <p className="text-black text-[15px]">{marketplace}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>
-                
+
                 <section className="py-10 bg-primary">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
+                    <div className="max-w-7xl mx-auto px-4 text-center">
                         <h3 className="text-3xl lg:text-3xl font-bold text-white mb-4">Are You a Service Provider?</h3>
                         <p className="mt-2 text-white text-base text-center mb-6">Join our network of verified experts. Receive matched requests and grow your business.</p>
                         <Link href="#" className="bg-white px-4 py-2.5 font-medium">Apply as a Verified Partner</Link>
@@ -292,7 +290,7 @@ export default function Marketplace() {
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-6">
 
                         <div>
-                            <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
+                            <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
                                 Get Started
                             </h2>
                             <p className="text-neutral-400 text-lg mt-3">

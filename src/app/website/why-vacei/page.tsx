@@ -101,7 +101,7 @@ export default function WhyVacei() {
         <>
             <Header />
             <main>
-                <section className="bg-white py-10">
+                <section className="bg-white py-10 px-4">
                     <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
                         {/* Heading Section */}
                         <div className="lg:max-w-4/6 w-full">
@@ -208,7 +208,7 @@ export default function WhyVacei() {
                 </section>
 
                 <section className="py-10 bg-white">
-                    <div className="max-w-7xl mx-auto px-6 text-center">
+                    <div className="max-w-7xl mx-auto px-4 text-center">
                         <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Our Clients Choose Vacei</h3>
 
                         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-6xl mx-auto">
@@ -226,7 +226,7 @@ export default function WhyVacei() {
                     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-6">
 
                         <div>
-                            <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
+                            <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
                                 The modern back office for modern businesses.
                             </h2>
                             <p className="text-neutral-400 text-lg mt-3">

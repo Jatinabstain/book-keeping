@@ -10,7 +10,7 @@ export default function TrustSecurity() {
     ]
 
     return (
-        <section className="bg-white py-10">
+        <section className="bg-white py-10 px-4">
             <div className="max-w-7xl mx-auto flex lg:flex-row flex-col items-start gap-10">
                 {/* Left Heading: width auto, no shrinking */}
                 <div className="flex-shrink-0 text-center lg:w-fit w-full">

@@ -4,152 +4,98 @@ import Footer from "@/components/website/Footer"
 import Header from "@/components/website/Header"
 import Link from "next/link"
 import {
+    Rocket,
     Banknote,
-    Calculator,
-    Percent,
-    HandCoins,
-    ChartArea,
-    Landmark,
-    FileText,
+    ShoppingCart,
     Scale,
-    UserCog,
-    ShieldCheck,
-    Lightbulb,
-    Megaphone,
-    LayoutDashboard
+    Building2,
+    Globe,
+    HeartPulse,
+    GraduationCap
 } from "lucide-react";
 
 const services = [
     {
-        name: 'Finance & Compliance',
-        icon: FileText,
+        name: 'Startups & Tech',
+        icon: Rocket,
         services: [
-            "Transfer Pricing Reports",
-            "Financial Forecasting",
-            "Internal Controls Setup",
-            "Budgeting & Management Reports"
+            "Fast onboarding and real-time bookkeeping",
+            "Pitch deck and business plan services",
+            "Budgeting, forecasting, and investor-ready reports",
+            "Cap table support and financial modeling"
         ],
     },
     {
-        name: 'Legal & Corporate',
+        name: 'Financial Services',
+        icon: Banknote,
+        services: [
+            "Accurate accounting for regulated entities",
+            "Tax return support and compliance reporting",
+            "Transfer pricing and CFO-level advisory",
+            "KYC/AML checks and regulatory filings"
+        ],
+    },
+    {
+        name: 'E-commerce & Retail',
+        icon: ShoppingCart,
+        services: [
+            "Sales tax / VAT return submissions",
+            "Integration with POS & payment platforms",
+            "Inventory reconciliation",
+            "Multi-currency support"
+        ],
+    },
+    {
+        name: 'Legal & Corporate Services',
         icon: Scale,
         services: [
-            "Company Formation (Local & International)",
-            "KYC / AML Checks",
-            "GDPR Compliance Audits",
-            "Trademark Registration",
-            "Legal Document Drafting",
-            "Shareholder Agreements"
+            "Company setup and MBR filings",
+            "Cross-border structuring support",
+            "Ongoing compliance and documentation management",
+            "GDPR and ISO certification handling"
         ],
     },
     {
-        name: 'HR & Employer Services',
-        icon: UserCog,
+        name: 'Construction & Real Estate',
+        icon: Building2,
         services: [
-            "Employment Contracts",
-            "HR Policies & Manuals",
-            "Work Visa Assistance",
-            "Payroll Outsourcing",
-            "Remote Hiring Support"
+            "Project-based accounting",
+            "Payroll and subcontractor management",
+            "VAT recovery and reporting",
+            "Investment structuring & property SPVs"
         ],
     },
     {
-        name: 'Cybersecurity & IT',
-        icon: ShieldCheck,
+        name: 'International Businesses',
+        icon: Globe,
         services: [
-            "ISO 27001 / 9001 Certification",
-            "Data Security Audits",
-            "Penetration Testing",
-            "IT Infrastructure Setup",
-            "Cloud Migration Support",
-            "SaaS Application Consulting"
+            "Localized compliance with international expansion support",
+            "Incorporation, residency schemes, and tax filing in multiple jurisdictions",
+            "Currency conversions and cross-border bookkeeping"
         ],
     },
     {
-        name: 'Business Strategy & Advisory',
-        icon: Lightbulb,
+        name: 'Health & Wellness',
+        icon: HeartPulse,
         services: [
-            "Pitch Deck Reviews",
-            "Business Plan Creation",
-            "Investor Reporting",
-            "Market Research",
-            "Expansion Strategy",
-            "Due Diligence Reports"
+            "Employee payroll and HR policy support",
+            "VAT exemptions and special scheme compliance",
+            "Business licensing and audit support"
         ],
     },
     {
-        name: 'Marketing & Creative',
-        icon: Megaphone,
+        name: 'Education & NGOs',
+        icon: GraduationCap,
         services: [
-            "Website Development",
-            "Social Media Management",
-            "Paid Ad Campaigns (Google, Facebook, LinkedIn)",
-            "SEO Audits & Content Strategy",
-            "Graphic Design & Branding",
-            "Video Commercials",
-            "Email Marketing Automation"
-        ],
-    },
-    {
-        name: 'All From Your Dashboard',
-        icon: LayoutDashboard,
-        services: [
-            "Bookkeeping",
-            "VAT Returns",
-            "Payroll",
-            "Tax Return Filing",
-            "MBR Filings",
-            "Audit Preparation",
-            "CFO Services",
-            "Incorporations",
-            "ISO Certification",
-            "GDPR Audits",
-            "Legal Support",
-            "Marketing & IT",
-            "Strategic Planning"
+            "Donor reporting and fund tracking",
+            "Financial statements and audit-ready books",
+            "Budgeting, grant accounting, and regulatory filing"
         ],
     },
 ];
 
-const servicesCore = [
-    {
-        icon: Calculator,
-        title: 'Bookkeeping',
-        description: 'Daily postings, reconciliations, and monthly reports - audit-ready, always.',
-    },
-    {
-        icon: Percent,
-        title: 'VAT Returns',
-        description: 'We prepare and submit your VAT return on time, with full supporting documentation.',
-    },
-    {
-        icon: HandCoins,
-        title: 'Payroll Processing',
-        description: 'Run compliant payroll, generate payslips, and handle tax submissions with ease.',
-    },
-    {
-        icon: Banknote,
-        title: 'Tax Return Filing',
-        description: 'Corporate tax return submissions handled by licensed experts.',
-    },
-    {
-        icon: ChartArea,
-        title: 'MBR Filings',
-        description: 'We take care of any filing requirements related to the Malta Business Registry.',
-    },
-    {
-        icon: Landmark,
-        title: 'Audit Preparation',
-        description: 'We prepare and organize your financials for a smooth audit experience.',
-    },
-    {
-        icon: ShieldCheck,
-        title: 'CFO Services',
-        description: 'On-demand strategic financial guidance, cash flow analysis, investor reporting, and performance insights.',
-    },
-]
 
-export default function Services() {
+export default function Industries() {
     return (
         <>
             <Header />
@@ -158,11 +104,11 @@ export default function Services() {
                     <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
                         {/* Heading Section */}
                         <div className="lg:max-w-4/6 w-full">
-                            <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight">Vacei Services</h1>
+                            <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight">Industries We Serve</h1>
                             <p className="mt-4 mb-1 text-neutral-900 font-semibold text-lg">
-                                Everything Your Business Needs - All in One Place
+                                Vacei is built for businesses of all sizes - across every industry.
                             </p>
-                            <p className="text-neutral-800">From expert bookkeeping to ISO certification, marketing, legal help, and more — Vacei brings together core financial services and a wide range of verified partners, all managed from one powerful dashboard.</p>
+                            <p className="text-neutral-800">Whether you're a solo founder, a growing startup, or a multinational, our smart bookkeeping and business services platform adapts to your needs.</p>
                         </div>
 
                         {/* Optional: Add image or illustration here */}
@@ -176,36 +122,9 @@ export default function Services() {
                     </div>
                 </section>
 
-                <section id="why-vacei" className="bg-gray-800 py-10 px-4">
-                    <div className="max-w-7xl mx-auto">
-                        <h2 className="text-3xl lg:text-3xl font-bold text-white text-center">Core Services (Handled by the Vacei Team)</h2>
-                        <p className="mb-8 mt-2 text-center font-semibold text-white">Delivered directly by our in-house professionals.</p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                            {servicesCore.map(({ title, icon: Icon, description }) => (
-                                <div
-                                    key={title}
-                                    className="group bg-white transition hover:shadow-xl rounded-0 p-6 relative overflow-hidden cursor-pointer"
-                                >
-                                    <div className="flex items-start gap-4">
-                                        <div className="bg-[#00799c] text-white p-2.5 rounded-full">
-                                            <Icon className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
-                                                {title}
-                                            </h3>
-                                            <p className="text-neutral-500 text-xs leading-relaxed">{description}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
                 <section className="bg-gray-50 py-10">
                     <div className="max-w-7xl mx-auto px-4 md:px-6">
-                        <div className="text-center">
+                        <div className="text-center hidden">
                             <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-4">
                                 Marketplace Services <span className="font-bold text-primary">(Request & Compare Offers)</span>
                             </h2>
@@ -236,7 +155,7 @@ export default function Services() {
                                             </div>
                                         );
                                     })()}
-                                    <ul className="list-disc pl-8 mt-6 space-y-3 text-gray-700 text-base">
+                                    <ul className="list-disc pl-8 mt-6 space-y-3 text-gray-700">
                                         {services[0].services.map((service, idx) => (
                                             <li key={idx}>{service}</li>
                                         ))}
@@ -272,7 +191,7 @@ export default function Services() {
 
                         {/* Last row with 2 cards side-by-side on desktop, stacked on mobile */}
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {services.slice(5, 7).map(({ name, icon: Icon, services: serviceList }) => (
+                            {services.slice(5, 8).map(({ name, icon: Icon, services: serviceList }) => (
                                 <div
                                     key={name}
                                     className="group bg-white hover:bg-white transition border border-gray-200 hover:shadow-xl
@@ -296,7 +215,6 @@ export default function Services() {
                                 </div>
                             ))}
                         </div>
-                        <p className="text-black text-center italic text-sm pt-8">Choose to work directly with Vacei or request quotes from verified professionals.</p>
                     </div>
                 </section>
 
@@ -305,10 +223,10 @@ export default function Services() {
 
                         <div>
                             <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
-                                Get Started Now
+                                Need help with a different sector?
                             </h2>
                             <p className="text-neutral-400 text-lg mt-3">
-                                Let us simplify your finances and streamline your business needs - all from one platform.
+                                Vacei supports any business, and our verified partner marketplace ensures you get the right experts — no matter your industry.
                             </p>
                         </div>
 

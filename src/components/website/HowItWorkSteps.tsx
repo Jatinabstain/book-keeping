@@ -38,7 +38,7 @@ export default function HowItWorksSteps() {
                             <div className="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center text-xl font-semibold mb-4">
                                 {index + 1}
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                            <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                             <p className="text-gray-600">{step.description}</p>
                         </div>
                     ))}

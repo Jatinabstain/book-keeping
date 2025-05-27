@@ -33,7 +33,7 @@ const features = [
 
 export default function WhyVacei() {
   return (
-    <section id="why-vacei" className="bg-gray-800 py-10 px-6">
+    <section id="why-vacei" className="bg-gray-800 py-10">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl lg:text-3xl font-bold text-white mb-8 text-center">Why Vacei</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

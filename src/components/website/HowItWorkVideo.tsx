@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 export default function HowItWorks() {
     const [isOpen, setIsOpen] = useState(false)
@@ -9,10 +8,10 @@ export default function HowItWorks() {
     return (
         <section className="w-full bg-white pb-10" id="how-it-works">
             {/* max-w-7xl mx-auto px-4 */}
-            <div className="text-center"> 
+            <div className="text-center">
                 <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-8">How It Works</h2>
                 <div
-                    className="relative group cursor-pointer mb-3"
+                    className="relative group cursor-pointer"
                     onClick={() => setIsOpen(true)}
                 >
                     <img

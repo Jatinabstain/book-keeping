@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function FeatureSection() {
     return (
-        <section className="bg-white pt-16 pb-10">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-18 items-center">
+        <section className="bg-white md:pt-16 pt-10 pb-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 md:gap-18 gap-6 items-center">
                 {/* Text Content */}
                 <div className="lg:order-1 order-2">
                     <p className="text-primary text-sm font-bold mb-2">vacei</p>
@@ -30,7 +30,7 @@ export default function FeatureSection() {
                 </div>
 
                 {/* Image */}
-                <div className="relative w-full h-72 md:h-96 lg:order-2 order-1">
+                <div className="relative w-full h-60 md:h-96 lg:order-2 order-1">
                     <Image
                         src="/hero-img.svg" // replace with your image path
                         alt="Why Vacei"

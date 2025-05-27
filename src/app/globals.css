@@ -16,7 +16,7 @@
   --bs-link-color: #00799c;
   --secondry: #04264D;
   --font-roboto: "Open Sans", sans-serif;
-  
+
 }
 
 a {
@@ -31,7 +31,7 @@ body {
   font-weight: 400;
 }
 
-main{
+main {
   min-height: 100vh;
 }
 
@@ -174,7 +174,8 @@ main{
 }
 
 .menu li a,
-.user_setting_menu, .menu .arrows {
+.user_setting_menu,
+.menu .arrows {
   position: relative;
   text-decoration: none;
   display: flex;
@@ -216,20 +217,21 @@ main{
   position: relative;
 }
 
-.menu > li > .sidebar-item:hover {
+.menu>li>.sidebar-item:hover {
   color: var(--light);
   background-color: var(--primary);
 }
 
-.menu > li > .sidebar-item  i {
+.menu>li>.sidebar-item i {
   font-size: 17px;
   line-height: 1;
 }
 
-.menu>li.active> .sidebar-item {
+.menu>li.active>.sidebar-item {
   color: var(--light);
   background-color: var(--primary);
 }
+
 .active_submenu {
   background-color: var(--primaryHover);
 }
@@ -281,7 +283,7 @@ main{
   padding-left: 80px;
 }
 
-.sidebar-item.open{
+.sidebar-item.open {
   color: var(--light);
   background-color: var(--primary);
 }
@@ -320,30 +322,38 @@ main{
   padding: 1.5rem 2rem;
   background-color: var(--light);
 }
-.arrows{
+
+.arrows {
   font-size: 14px !important;
 }
-.bg-overlay{
+
+.bg-overlay {
   background-color: rgba(0, 0, 0, .5);
 }
-.dashboard_card{
+
+.dashboard_card {
   position: relative;
   color: var(--primary);
 }
-.dashboard_card i{
+
+.dashboard_card i {
   position: absolute;
   right: 12px;
   top: 6px;
   font-size: 30px;
 }
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.table_custom td, .table_custom th {
+
+.table_custom td,
+.table_custom th {
   padding: 0.5rem 1.25rem;
   text-wrap: nowrap;
   border-bottom: 1px solid var(--border);

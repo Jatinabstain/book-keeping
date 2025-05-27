@@ -6,7 +6,7 @@ export default function FinalCTA() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-6">
 
         <div>
-          <h2 className="text-4xl font-extrabold leading-tight tracking-tight">
+          <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
             Ready to Simplify Your Business?
             <span className="block text-neutral-400">Let us handle the books</span>
           </h2>

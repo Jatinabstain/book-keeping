@@ -10,7 +10,6 @@ import RequestService from "@/components/website/RequestService";
 import TrustSecurity from "@/components/website/TrustSecurity";
 import WhyChooseUs from "@/components/website/WhyChooseUs";
 import WhyVacei from "@/components/website/WhyVacei";
-import { Bus } from "lucide-react";
 
 export default function Website() {
   return (

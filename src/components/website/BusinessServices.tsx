@@ -4,7 +4,6 @@ import {
     HandCoins,
     Handshake,
     Shield,
-    Book,
     Calculator,
     Scale,
 } from 'lucide-react'
@@ -64,8 +63,8 @@ const services = [
 
 export default function BusinessServices() {
     return (
-        <section id="request-service" className="bg-white py-10">
-            <div className="max-w-7xl mx-auto px-6">
+        <section id="request-service" className="bg-white py-10 px-4">
+            <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center">
                     <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-4">
                         Business Services Marketplace <span className="font-bold text-primary">(NEW!)</span>

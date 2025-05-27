@@ -30,7 +30,7 @@ export default function RequestService() {
 
     return (
         <section id="request-service" className="bg-primary py-10">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-8">
                     <h2 className="text-3xl lg:text-3xl font-bold text-white">Everything in One Dashboard</h2>
                     <p className="mt-2 text-white mx-auto">

@@ -1,12 +1,11 @@
 import {
     LayoutDashboard,
-    Upload,
-    FileCheck,
-    CalendarCheck,
-    Bot,
-    MessageCircle,
-    Archive,
-    FolderKanban,
+    CloudUpload,
+    FileCheck2,
+    CircleHelp,
+    MessagesSquare,
+    FileSliders,
+    Share2
 } from 'lucide-react'
 
 export default function KeyFeaturesList() {
@@ -17,32 +16,32 @@ export default function KeyFeaturesList() {
             desc: 'Real-time updates and full visibility.',
         },
         {
-            icon: Upload,
+            icon: CloudUpload,
             title: 'Drag & Drop Uploads',
             desc: 'Also supports mobile and email.',
         },
         {
-            icon: FileCheck,
+            icon: FileCheck2,
             title: 'Document Status Tags',
             desc: 'Posted, Pending Review, Needs Correction.',
         },
         {
-            icon: FolderKanban,
+            icon: FileSliders,
             title: 'Service Request System',
             desc: 'Request VAT, payroll, audits, etc. in one click.',
         },
         {
-            icon: CalendarCheck,
+            icon: Share2,
             title: 'Organized File Sharing',
             desc: 'Smart, searchable document hub.',
         },
         {
-            icon: Bot,
+            icon: CircleHelp,
             title: 'Choose How You Work',
             desc: "Use Vacei's in-house team or receive external proposals.",
         },
         {
-            icon: MessageCircle,
+            icon: MessagesSquare,
             title: 'Zoom + Chat Integration',
             desc: 'Chat, share, and schedule meetings in one place.',
         }
@@ -61,7 +60,7 @@ export default function KeyFeaturesList() {
                         />
                     </div>
                 </div>
-                <div className="bg-primary lg:flex-1/2 flex-auto w-full lg:mb-0 p-10 lg:px-18">
+                <div className="bg-primary lg:flex-1/2 flex-auto w-full lg:mb-0 py-10 px-4 lg:px-18">
                     <h2 className="text-3xl lg:text-3xl mb-6 font-bold text-center text-white">Key Features</h2>
                     {/* Text Content */}
                     <div className="space-y-8 text-left">
