@@ -4,7 +4,8 @@
   --light: #ffffff;
   --black: #000000;
   --textLight: #c2c2c2;
-  --primary: #00799c;
+  --textDark: #0A1B04;
+  --primary: #10AA02;
   --primaryHover: #215d73;
   --secondaryRed: #b11107;
 
@@ -15,7 +16,7 @@
   --shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
   --bs-link-color: #00799c;
   --secondry: #04264D;
-  --font-roboto: "Open Sans", sans-serif;
+  --font: "Inter Tight", sans-serif;
 
 }
 
@@ -26,7 +27,7 @@ a {
 body {
   color: var(--dark);
   background: var(--background);
-  font-family: var(--font-roboto);
+  font-family: var(--font);
   font-size: 14px;
   font-weight: 400;
 }
@@ -359,6 +360,10 @@ main {
   border-bottom: 1px solid var(--border);
 }
 
+.text-dark {
+  color: var(--textDark) !important;
+}
+
 @layer utilities {
   .animate-fade-in {
     @apply opacity-0 scale-95 transition-all duration-300 ease-out;
@@ -371,4 +376,12 @@ main {
       transform: scale(1);
     }
   }
+}
+.bg-gradient-end{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 80%);
+  position: absolute;
+  width: 100%;
+  height: 150px;
+  bottom: 0;
+  z-index: 10;
 }

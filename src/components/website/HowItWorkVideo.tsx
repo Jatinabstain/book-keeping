@@ -6,7 +6,7 @@ export default function HowItWorks() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <section className="w-full bg-white pb-10" id="how-it-works">
+        <section className="w-full bg-white pt-[120px] pb-10" id="how-it-works">
             {/* max-w-7xl mx-auto px-4 */}
             <div className="text-center">
                 <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-8">How It Works</h2>

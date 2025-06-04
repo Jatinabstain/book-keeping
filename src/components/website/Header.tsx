@@ -1,47 +1,63 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation"; // <-- import this
+import { usePathname } from "next/navigation";
 
 const navItems = [
-    { label: "Why Vacei?", icon: "fi fi-rr-comment-question", href: "/website/why-vacei" },
-    { label: "Services", icon: "fi fi-rr-apps", href: "/website/services" },
-    { label: "Marketplace", icon: "fi fi-rr-shopping-cart", href: "/website/marketplace" },
-    { label: "Pricing", icon: "fi fi-rr-tags", href: "/website/pricing" },
-    { label: "Resources", icon: "fi fi-rr-layers", href: "#" }
+    { label: "Home", href: "/website/" },
+    { label: "Why Vacei?", href: "/website/why-vacei" },
+    { label: "Services", href: "/website/services" },
+    { label: "Marketplace", href: "/website/marketplace" },
+    { label: "Pricing", href: "/website/pricing" },
+    { label: "Resources", href: "#" }
 ];
 
 export default function Header() {
     const [open, setOpen] = useState(false);
-    const pathname = usePathname(); // <-- get current path
+    const pathname = usePathname();
+
+    const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
     return (
-        <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center h-16 text-base">
+        <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/60 backdrop-blur-lg' : 'bg-transparent'
+      }`}
+    >
+            <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center py-7 text-base">
                 {/* Logo */}
                 <Link href="/website">
                     <Image
-                        src="/logo-main.png"
+                        src="/logo.svg"
                         alt="Vacei Logo"
-                        width={100}
+                        width={140}
                         height={50}
                     />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex space-x-8 items-center">
+                <nav className="hidden lg:flex gap-8 items-center">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className={`flex items-center gap-2 text-[15px] font-medium transition-colors ${isActive ? "text-primary" : "text-gray-700"
+                                className={`flex items-center gap-2 font-normal transition-colors ${isActive ? "text-primary" : "text-dark"
                                     }`}
                             >
-                                <i className={`${item.icon} text-sm`}></i>
                                 {item.label}
                             </Link>
                         );
@@ -52,24 +68,18 @@ export default function Header() {
                 <div className="hidden lg:flex items-center gap-4 text-base">
                     <Link
                         href="/signin"
-                        className="inline-block bg-gray-800 text-white text-[15px] px-3 py-1.5"
+                        className="inline-block bg-transparent border rounded-lg border-color text-primary px-8 py-[11px]"
                     >
                         Sign In
-                    </Link>
-                    <Link
-                        href="#"
-                        className="inline-block bg-primary text-white text-[15px] px-3 py-1.5"
-                    >
-                        Get Started Free
                     </Link>
                 </div>
 
                 {/* Mobile Menu Toggle */}
                 <button
                     onClick={() => setOpen(!open)}
-                    className="lg:hidden text-gray-700 transition"
+                    className="lg:hidden text-dark transition"
                 >
-                    <i className={`fi ${open ? "fi-rr-cross" : "fi-rr-menu-burger"} text-lg`}></i>
+                    <i className={`fi ${open ? "fi-rr-cross" : "fi-rr-menu-burger"} text-2xl`}></i>
                 </button>
             </div>
 
@@ -86,7 +96,6 @@ export default function Header() {
                                     }`}
                                 onClick={() => setOpen(false)}
                             >
-                                <i className={`${item.icon} text-base`}></i>
                                 {item.label}
                             </Link>
                         );

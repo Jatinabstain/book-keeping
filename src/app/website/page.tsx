@@ -14,14 +14,19 @@ import WhyVacei from "@/components/website/WhyVacei";
 export default function Website() {
   return (
     <>
-      <div className="bg-primary py-2">
-        <div className="max-w-7xl mx-auto po">
-          <p className="text-white text-center">Now live! - Vecei's 2025 Founder Salary Report <i className="fi fi-rr-arrow-right align-middle ms-1"></i></p>
+      <section className="main_hero bg-white relative min-h-screen overflow-hidden">
+        <div className="relative z-10">
+          <Header />
+          <FeatureSection />
         </div>
-      </div>
-      <Header />
-      <FeatureSection />
-      <HowItWorks />
+
+        <div className="max-w-[600px] w-1/2 h-[600px] bg-[#FFF8AF] blur-[1000px] absolute top-0 left-0 z-[9]"></div>
+        <div className="max-w-[600px] w-1/2 h-[600px] -rotate-180 bg-[#AFFFC1] blur-[1000px] absolute top-0 right-0 z-[8]"></div>
+        <div className="max-w-[600px] w-1/2 h-[600px] bg-[#AFD2FF] blur-[1000px] absolute bottom-0 left-0 z-[7]"></div>
+        <div className="max-w-[600px] w-1/2 h-[600px] -rotate-180 bg-[#CAAFFF] blur-[1000px] absolute bottom-0 right-0 z-[6]"></div>
+        <div className="bg-gradient-end"></div>
+      </section>
+
       <HowItWorksSteps />
       <WhyVacei />
       <KeyFeatures />

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Open_Sans } from 'next/font/google'
+import { Inter_Tight } from 'next/font/google'
 import "@flaticon/flaticon-uicons/css/all/all.css";
 import "@flaticon/flaticon-uicons/css/brands/all.css";
 
 import "./globals.css";
 
-const open_Sans = Open_Sans({
-  weight: ['300', '400', '500', '600', '700', '800'],
+const inter_tight = Inter_Tight({
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={open_Sans.className}>
+      <body className={inter_tight.className}>
         {children}
       </body>
     </html>
