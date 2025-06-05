@@ -57,7 +57,7 @@ export default function PricingSection() {
                         </ul>
 
                         <Link
-                            href="/start-bookkeeping"
+                            href="javascript:void(0)"
                             className="flex items-center justify-center bg-primary w-full text-center font-medium p-3 text-white"
                         >
                             Start Bookkeeping
@@ -111,7 +111,7 @@ export default function PricingSection() {
                         </ul>
 
                         <Link
-                            href="/start-bookkeeping"
+                            href="javascript:void(0)"
                             className="flex items-center justify-center bg-primary w-full text-center font-medium p-3 text-white"
                         >
                             Start Core Accounting
@@ -151,7 +151,7 @@ export default function PricingSection() {
                             <li>Encrypted contact protection</li>
                         </ul>
                         <Link
-                            href="/start-bookkeeping"
+                            href="javascript:void(0)"
                             className="flex items-center justify-center bg-primary w-full text-center font-medium p-3 text-white"
                         >
                             Explore Marketplace

@@ -20,22 +20,24 @@ export default function Header() {
 
     const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      setScrolled(offset > 10);
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            const offset = window.scrollY;
+            setScrolled(offset > 10);
+        };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     return (
         <header
-      className={`fixed w-full top-0 z-[999] transition-all duration-300 ${
-        scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'
-      }`}
-    >
+            className={`w-full top-0 z-[999] bg-white transition-all duration-300 ${pathname === '/website'
+                    ? `fixed ${scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'}`
+                    : ''
+                }`}
+        >
+
             <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center py-7 text-base">
                 {/* Logo */}
                 <Link href="/website">
@@ -67,7 +69,7 @@ export default function Header() {
                 {/* Right Actions */}
                 <div className="hidden lg:flex items-center gap-4 text-base">
                     <Link
-                        href="/signin"
+                        href="javascript:void(0)"
                         className="inline-block bg-transparent border rounded-lg border-color text-primary px-8 py-[11px]"
                     >
                         Sign In
@@ -84,8 +86,7 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu */}
-            {open && (
-                
+            {open && pathname === '/website' && (
                 <div className="lg:hidden shadow-lg px-4 py-4 rounded-b-xl space-y-4 animate-slide-down">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
@@ -102,8 +103,8 @@ export default function Header() {
                         );
                     })}
                     <hr className="border-gray-200" />
-                   <Link
-                        href="/signin"
+                    <Link
+                        href="javascript:void(0)"
                         className="inline-block bg-transparent border rounded-lg border-color text-primary px-8 py-[11px]"
                     >
                         Sign In

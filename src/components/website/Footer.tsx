@@ -14,16 +14,16 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-4">
         <div className="flex gap-4">
-          <a href="#">
+          <a href="javascript:void(0)">
             <img src="/facebook.svg" className='w-5 h-5 object-contain' alt="facebook" />
           </a>
-          <a href="#">
+          <a href="javascript:void(0)">
             <img src="/x.svg" className='w-5 h-5 object-contain' alt="x" />
           </a>
-          <a href="#">
+          <a href="javascript:void(0)">
             <img src="/insta.svg" className='w-5 h-5 object-contain' alt="instagram" />
           </a>
-          <a href="#">
+          <a href="javascript:void(0)">
             <img src="/linkedin.svg" className='w-5 h-5 object-contain' alt="linkedin" />
           </a>
         </div>
@@ -35,7 +35,7 @@ export default function Footer() {
           <h4 className="text-base font-medium mb-2.5">Platform</h4>
           <ul className="leading-[30px] text-base font-light">
         <li><a href="/login">Dashboard</a></li>
-        <li><a href="#">Features</a></li>
+        <li><a href="javascript:void(0)">Features</a></li>
         <li><a href="/website/industries">Industries</a></li>
         <li><a href="/website/customers">Customers</a></li>
           </ul>
@@ -44,9 +44,9 @@ export default function Footer() {
         <div className="flex flex-col flex-1">
           <h4 className="text-base font-medium mb-2.5">Company</h4>
           <ul className="leading-[30px] text-base font-light">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="javascript:void(0)">About</a></li>
+        <li><a href="javascript:void(0)">Careers</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
           </ul>
         </div>
 
@@ -54,8 +54,8 @@ export default function Footer() {
         <div className="flex flex-col flex-1">
           <h4 className="text-base font-medium mb-2.5">Legal</h4>
           <ul className="leading-[30px] text-base font-light">
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
+        <li><a href="javascript:void(0)">Terms</a></li>
+        <li><a href="javascript:void(0)">Privacy</a></li>
           </ul>
         </div>
       </div>

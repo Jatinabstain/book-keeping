@@ -230,13 +230,13 @@ export default function customers() {
 
                         <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 md:justify-end">
                             <Link
-                                href="#"
+                                href="javascript:void(0)"
                                 className="bg-white text-black font-medium px-6 py-3 shadow hover:bg-neutral-200 transition"
                             >
                                 Create Free Account
                             </Link>
                             <Link
-                                href="#"
+                                href="javascript:void(0)"
                                 className="border border-white/20 text-white font-medium px-6 py-3 hover:bg-white/10 transition"
                             >
                                 Request a Demo

@@ -12,13 +12,13 @@ export default function FinalCTA() {
 
         <div className="flex flex-col sm:flex-row lg:flex-row gap-6 justify-center lg:px-0 px-5">
           <Link
-            href="#"
+            href="javascript:void(0)"
             className="bg-primary text-white font-normal px-8 py-3.5 text-lg rounded-lg capitalize text-center"
           >
             Create Free Account
           </Link>
           <Link
-            href="#"
+            href="javascript:void(0)"
             className="bg-transparent text-white font-normal px-8 py-3 text-lg rounded-lg capitalize border border-white text-center"
           >
             Request a Demo

@@ -4,11 +4,8 @@ import FinalCTA from "@/components/website/FinalCTA";
 import Footer from "@/components/website/Footer";
 import Header from "@/components/website/Header";
 import HowItWorksSteps from "@/components/website/HowItWorkSteps";
-import HowItWorks from "@/components/website/HowItWorkVideo";
 import KeyFeatures from "@/components/website/KeyFeatures";
 import RequestService from "@/components/website/RequestService";
-import TrustSecurity from "@/components/website/TrustSecurity";
-import WhyChooseUs from "@/components/website/WhyChooseUs";
 import WhyVacei from "@/components/website/WhyVacei";
 
 export default function Website() {
