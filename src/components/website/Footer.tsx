@@ -2,52 +2,61 @@ import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-neutral-950 text-neutral-300 px-6 py-10">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+    <footer className="bg-[#FBF8F3] px-4 py-20 relative overflow-hidden">
+      <div className="w-[265px] h-[265px] bg-[#FFF8AF] blur-[100px] absolute top-0 -left-10"></div>
+      <div className="w-[265px] h-[265px] bg-[#B6FFAF] blur-[100px] absolute bottom-0 -right-10"></div>
+      <div className="max-w-6xl mx-auto flex flex-wrap gap-20 relative z-1">
         {/* Company Info */}
-        <div>
-          <h2 className="text-white text-xl font-bold mb-5  ">Vacei</h2>
+        <div className="flex flex-col lg:flex-[2_0%]">
+          <img src="/logo.svg" className='mb-4 h-10 object-contain me-auto' alt="" />
+          <p className="text-dark text-base leading-6 mb-4 font-light">
+        © {new Date().getFullYear()} Vacei. All rights reserved.
+          </p>
           <div className="flex flex-col gap-4">
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-white"><Facebook size={20} /></a>
-              <a href="#" className="hover:text-white"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-white"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-white"><Linkedin size={20} /></a>
-            </div>
-            <p className="text-neutral-500 text-xs">
-              © {new Date().getFullYear()} Vacei. All rights reserved.
-            </p>
+        <div className="flex gap-4">
+          <a href="#">
+            <img src="/facebook.svg" className='w-5 h-5 object-contain' alt="facebook" />
+          </a>
+          <a href="#">
+            <img src="/x.svg" className='w-5 h-5 object-contain' alt="x" />
+          </a>
+          <a href="#">
+            <img src="/insta.svg" className='w-5 h-5 object-contain' alt="instagram" />
+          </a>
+          <a href="#">
+            <img src="/linkedin.svg" className='w-5 h-5 object-contain' alt="linkedin" />
+          </a>
+        </div>
           </div>
         </div>
 
         {/* Links */}
-        <div>
-          <h4 className="text-white font-semibold mb-3">Platform</h4>
-          <ul className="space-y-2">
-            <li><a href="/login" className="hover:text-white">Dashboard</a></li>
-            <li><a href="#" className="hover:text-white">Features</a></li>
-            <li><a href="/website/industries" className="hover:text-white">Industries</a></li>
-            <li><a href="/website/customers" className="hover:text-white">Customers</a></li>
+        <div className="flex flex-col flex-1">
+          <h4 className="text-base font-medium mb-2.5">Platform</h4>
+          <ul className="leading-[30px] text-base font-light">
+        <li><a href="/login">Dashboard</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="/website/industries">Industries</a></li>
+        <li><a href="/website/customers">Customers</a></li>
           </ul>
         </div>
 
-        <div>
-          <h4 className="text-white font-semibold mb-3">Company</h4>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white">About</a></li>
-            <li><a href="#" className="hover:text-white">Careers</a></li>
-            <li><a href="#" className="hover:text-white">Contact</a></li>
+        <div className="flex flex-col flex-1">
+          <h4 className="text-base font-medium mb-2.5">Company</h4>
+          <ul className="leading-[30px] text-base font-light">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Contact</a></li>
           </ul>
         </div>
 
         {/* Social + Legal */}
-        <div className="flex flex-col gap-4">
-          <h4 className="text-white font-semibold mb-3">Legal</h4>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-white">Terms</a></li>
-            <li><a href="#" className="hover:text-white">Privacy</a></li>
+        <div className="flex flex-col flex-1">
+          <h4 className="text-base font-medium mb-2.5">Legal</h4>
+          <ul className="leading-[30px] text-base font-light">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
           </ul>
-
         </div>
       </div>
     </footer>

@@ -33,7 +33,7 @@ export default function HowItWorksSteps() {
     ]
 
     return (
-        <section className="bg-white pt-[120px] pb-10" id="how-it-works-steps">
+        <section className="bg-white lg:py-[120px] py-[30px]" id="how-it-works-steps">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div>
@@ -48,8 +48,10 @@ export default function HowItWorksSteps() {
                             <div className={`${step.bgcolor ?? ''} shadow absolute max-w-[250px] w-full h-[125px] top-0 mx-auto left-0 right-0  blur-[90px]`}></div>
                             <div className="relative z-[1]">    
                                 {step.image && <img src={step.image} className="w-full" />}
-                                <h3 className="text-lg font-semibold mb-2 text-center">{step.title}</h3>
-                                <p className="text-gray-600">{step.description}</p>
+                                <div className="mt-11">
+                                    <h3 className="text-2xl font-semibold mb-2 text-center capitalize">{step.title}</h3>
+                                    <p className="text-[#3D3D3D] text-base text-center font-light capitalize">{step.description}</p>
+                                </div>
                             </div>
                         </div>
                     ))}

@@ -2,29 +2,24 @@ import Link from "next/link"
 
 export default function FinalCTA() {
   return (
-    <section className="bg-neutral-900 text-white py-10 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-6">
-
-        <div>
-          <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
-            Ready to Simplify Your Business?
-            <span className="block text-neutral-400">Let us handle the books</span>
+    <section className="bg-[#0A1B04] text-white py-[100px] px-4">
+      <div className="lg:max-w-3xl max-w-xl mx-auto px-4">
+        <div className="text-center mb-[50px]">
+          <h2 className="lg:text-5xl text-4xl font-normal lg:leading-[60px] leading-12 text-white">
+            Ready to Simplify Your Business? Let us handle the books
           </h2>
-          <p className="text-neutral-400 text-lg mt-3">
-            and connect you with everything else.
-          </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 md:justify-end">
+        <div className="flex flex-col sm:flex-row lg:flex-row gap-6 justify-center lg:px-0 px-5">
           <Link
             href="#"
-            className="bg-white text-black font-medium px-6 py-3 shadow hover:bg-neutral-200 transition"
+            className="bg-primary text-white font-normal px-8 py-3.5 text-lg rounded-lg capitalize text-center"
           >
             Create Free Account
           </Link>
           <Link
             href="#"
-            className="border border-white/20 text-white font-medium px-6 py-3 hover:bg-white/10 transition"
+            className="bg-transparent text-white font-normal px-8 py-3 text-lg rounded-lg capitalize border border-white text-center"
           >
             Request a Demo
           </Link>

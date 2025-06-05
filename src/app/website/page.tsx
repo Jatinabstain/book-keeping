@@ -15,8 +15,8 @@ export default function Website() {
   return (
     <>
       <section className="main_hero bg-white relative min-h-screen overflow-hidden">
+        <Header />
         <div className="relative z-10">
-          <Header />
           <FeatureSection />
         </div>
 
@@ -32,9 +32,7 @@ export default function Website() {
       <KeyFeatures />
       <BusinessServices />
       <RequestService />
-      <WhyChooseUs />
       <FinalCTA />
-      <TrustSecurity />
       <Footer />
     </>
   );

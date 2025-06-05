@@ -32,8 +32,8 @@ export default function Header() {
 
     return (
         <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/60 backdrop-blur-lg' : 'bg-transparent'
+      className={`fixed w-full top-0 z-[999] transition-all duration-300 ${
+        scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'
       }`}
     >
             <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center py-7 text-base">
@@ -85,7 +85,8 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="lg:hidden bg-white/90 backdrop-blur-md shadow-lg px-4 py-4 rounded-b-xl space-y-4 animate-slide-down">
+                
+                <div className="lg:hidden shadow-lg px-4 py-4 rounded-b-xl space-y-4 animate-slide-down">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (
@@ -101,22 +102,12 @@ export default function Header() {
                         );
                     })}
                     <hr className="border-gray-200" />
-                    <div className="flex gap-4">
-                        <Link
-                            href="/signin"
-                            className="inline-block bg-gray-800 text-white text-[15px] px-3 py-1.5"
-                            onClick={() => setOpen(false)}
-                        >
-                            Sign In
-                        </Link>
-                        <Link
-                            href="#"
-                            className="inline-block bg-primary text-white text-[15px] px-3 py-1.5"
-                            onClick={() => setOpen(false)}
-                        >
-                            Get Started Free
-                        </Link>
-                    </div>
+                   <Link
+                        href="/signin"
+                        className="inline-block bg-transparent border rounded-lg border-color text-primary px-8 py-[11px]"
+                    >
+                        Sign In
+                    </Link>
                 </div>
             )}
         </header>
