@@ -31,12 +31,17 @@ export default function Header() {
     }, []);
 
     return (
+        // <header
+        //     className={`w-full top-0 z-[999] bg-white transition-all duration-300 ${pathname === '/website'
+        //             ? `fixed ${scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'}`
+        //             : ''
+        //         }`}
+        // >
         <header
-            className={`w-full top-0 z-[999] bg-white transition-all duration-300 ${pathname === '/website'
-                    ? `fixed ${scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'}`
-                    : ''
-                }`}
-        >
+    className={`fixed w-full top-0 z-[999] lg:bg-transparent transition-all duration-300 ${
+        scrolled ? ' bg-white/60 backdrop-blur-lg' : ''
+    }`}
+>
 
             <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-between items-center py-7 text-base">
                 {/* Logo */}
@@ -86,8 +91,8 @@ export default function Header() {
             </div>
 
             {/* Mobile Menu */}
-            {open && pathname === '/website' && (
-                <div className="lg:hidden shadow-lg px-4 py-4 rounded-b-xl space-y-4 animate-slide-down">
+            {open && (
+                <div className="lg:hidden shadow-lg px-4 py-4 rounded-b-xl space-y-4 animate-slide-down bg-white">
                     {navItems.map((item) => {
                         const isActive = pathname === item.href;
                         return (

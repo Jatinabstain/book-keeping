@@ -9,57 +9,57 @@ import {
 export default function HowItWorkServices() {
     const features = [
         {
-            icon: ClipboardEdit,
+            image: "/post.png",
             title: 'Post a Requirement',
             desc: 'Describe the service you need (e.g., ISO certification, VAT returns, residency application).',
         },
         {
-            icon: CalendarClock,
+            image: "/files.png",
             title: 'Set Deadline & Upload Files',
             desc: 'Set your timeline, priority, and upload supporting documents.',
         },
         {
-            icon: ShieldCheck,
+            image: "/offer.png",
             title: 'Receive Verified Offers',
             desc: 'Get proposals with timelines, pricing, and credentials from verified professionals.',
         },
         {
-            icon: MessagesSquare,
+            image: "/chat.png",
             title: 'Chat & Meet',
             desc: 'Use our secure in-platform messaging and schedule Zoom meetings without sharing personal contact details.',
         },
         {
-            icon: UserCheck,
+            image: "/choose.png",
             title: 'Choose the Best Fit',
             desc: 'Accept an offer, track progress, and leave a review after completion. All files and chats are archived for future reference.',
         }
     ]
 
     return (
-        <section className="bg-gray-50">
+        <section className="bg-[#0A1B04]">
             <div className="flex lg:flex-row flex-col flex-wrap items-center justify-between">
-                <div className="bg-gray-50 lg:max-h-screen h-full lg:flex-1/2 flex-auto w-full lg:mb-0 p-10 flex justify-center flex-col">
+                <div className="lg:max-h-screen h-full lg:flex-2/5 flex-auto w-full flex justify-center flex-col">
                     {/* Image */}
                     <div className="relative">
                         <img
-                            src="/service-page-banner.svg"
-                            alt="Why Vacei"
-                            className='w-3/4 mx-auto'
+                            src="/how-it-work.png"
+                            alt="How It Works"
+                            className='w-4/5 lg:mb-0 mb-6 mt-[80px]'
                         />
                     </div>
                 </div>
-                <div className="bg-primary lg:flex-1/2 flex-auto w-full lg:mb-0 px-5 py-10 lg:px-10">
-                    <h2 className="text-3xl lg:text-3xl mb-6 font-bold text-center text-white">How It Works</h2>
+                <div className="lg:flex-3/5 flex-auto w-full xl:p-5 lg:p-8 p-4 pb-12">
+                    <h2 className="text-3xl lg:text-5xl mb-[50px] font-normal text-white">How It Works</h2>
                     {/* Text Content */}
-                    <div className="space-y-10 text-left">
-                        {features.map(({ icon: Icon, title, desc }, index) => (
+                    <div className="space-y-8 text-left">
+                        {features.map(({ image, title, desc }, index) => (
                             <div key={index} className="flex items-start gap-4">
-                                <div className="flex items-center justify-center min-w-10 min-h-10 rounded-full bg-white text-primary shadow-lg">
-                                    <Icon className="w-5 h-5" />
+                                <div className="flex items-center justify-center min-w-[50px] min-h-[50px] rounded-[4px] bg-white text-primary">
+                                    <img src={image} className="w-8 h-8 object-contain" alt="" />
                                 </div>
                                 <div>
-                                    <h3 className="text-lg font-semibold text-white">{title}</h3>
-                                    <p className="text-white/70 text-sm">{desc}</p>
+                                    <h3 className="lg:text-2xl text-lg font-medium text-white">{title}</h3>
+                                    <p className="text-[#979797] lg:text-base text-sm">{desc}</p>
                                 </div>
                             </div>
                         ))}

@@ -78,23 +78,23 @@ const services = [
 
 const servicesCore = [
     {
-        icon: UploadCloud,
+        image: '/file-share.png',
         title: 'File Upload & Sharing per request'
     },
     {
-        icon: CalendarCheck2,
-        title: 'Zoom Integration with calendar links'
-    },
-    {
-        icon: FileClock,
+        image: '/audit-trail.png',
         title: 'Audit Trail: Timestamps and full logs'
     },
     {
-        icon: ThumbsUp,
+        image: '/zoom.png',
+        title: 'Zoom Integration with calendar links'
+    },
+    {
+        image: '/rating.png',
         title: 'Ratings & Reviews after service delivery'
     },
     {
-        icon: ShieldCheck,
+        image: '/safety.png',
         title: 'Safety Tools: Auto-suspend on abuse or flagged behavior'
     },
 ];
@@ -112,79 +112,72 @@ export default function Marketplace() {
         <>
             <Header />
             <main>
-                <section className="bg-white py-10">
-                    <div className="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center justify-between gap-10">
-                        {/* Heading Section */}
-                        <div className="lg:max-w-4/6 w-full">
-                            <h1 className="text-3xl md:text-5xl font-bold text-neutral-900 leading-tight">Vacei Marketplace</h1>
-                            <p className="mt-4 mb-1 text-neutral-900 font-semibold text-lg">
-                                Your Gateway to Verified Business Services
-                            </p>
-                            <p className="text-neutral-800">Post your requirements. Get offers. Choose the best - all from your Vacei dashboard.</p>
-                        </div>
 
-                        {/* Optional: Add image or illustration here */}
-                        <div className="lg:block lg:max-w-1/3 w-full">
-                            <img
-                                src="/page-banner1.svg"
-                                alt="Vacei dashboard illustration"
-                                className="w-full max-w-md"
-                            />
+                <section className="bg-white pt-30 pb-14 px-4 relative overflow-hidden">
+                    <div className="max-w-[350px] w-1/2 h-[350px] bg-[#FFF8AF] blur-[200px] absolute top-0 left-0 z-[1]"></div>
+                    <div className="max-w-[350px] w-1/2 h-[350px] -rotate-180 bg-[#AFD2FF] blur-[200px] absolute bottom-0 right-0 z-[2]"></div>
+
+                    <div className="max-w-5xl mx-auto px-4 md:px-6 text-center gap-10 relative z-[3]">
+                        {/* Heading Section */}
+                        <div className="lg:max-w-1/2 mx-auto w-full">
+                            <h1 className="text-3xl lg:text-[56px] font-medium text-dark text-center mb-4 capitalize">Vacei Marketplace</h1>
+                            <p className="mt-4 text-neutral-900 font-normal text-xl mb-2">Your Gateway to Verified Business Services</p>
+                            <p className="capitalize text-[#3D3D3D]">Post your requirements. Get offers. Choose the best - all from your Vacei dashboard.</p>
                         </div>
                     </div>
                 </section>
 
-                <section className="bg-gray-50 py-10">
+                <section className="bg-white py-[100px] px-4 mb-5">
                     <div className="max-w-7xl mx-auto px-4 md:px-6">
-                        <div className="text-center max-w-5xl mx-auto">
-                            <h2 className="text-3xl lg:text-3xl font-bold text-primary mb-4">What Is the Vacei Marketplace?</h2>
-                            <p className="mt-2 text-black mx-auto">The Vacei Marketplace connects businesses with trusted, verified service providers. Whether you need an ISO certification, company formation, residency guidance, legal drafting, or marketing support - simply post your requirement, set your deadline, and review proposals from vetted experts.</p>
-                            <p className="mt-2 text-black mx-auto mb-6">Everything is handled securely, transparently, and professionally.</p>
-                        </div>
-                        <div className="max-w-3xl mx-auto bg-white rounded-0 shadow-2xl p-5 border-s-5 border-color">
-                            <p className="font-bold text-black">Every request and completed service remains saved and trackable
-                                <span className="font-normal">within your dashboard - with full documentation, chat history, and audit trail.</span>
-                            </p>
+                        <div className="bg-cream pt-[60px] lg:px-20 px-4 pb-[110px] rounded-3xl ">
+                            <div className="text-center max-w-5xl mx-auto">
+                                <h2 className="text-3xl lg:text-3xl font-medium mb-4">What Is the Vacei Marketplace?</h2>
+                                <p className="mb-8 text-black mx-auto">The Vacei Marketplace connects businesses with trusted, verified service providers. Whether you need an ISO certification, company formation, residency guidance, legal drafting, or marketing support - simply post your requirement, set your deadline, and review proposals from vetted experts. Everything is handled securely, transparently, and professionally.</p>
+                                
+                                <div className="bg-[#0A1B04] rounded-lg px-12 py-[60px]">
+                                    <p className="text-white text-[32px] leading-10 capitalize">Every request and completed service remains saved and trackable <span className="text-[#D0D0D0]">within your dashboard - with full documentation, chat history, and audit trail.</span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <HowItWorkServices />
 
-                <section id="why-vacei" className="bg-gray-800 py-10 px-4">
+                <section className="bg-white py-[120px] px-4">
                     <div className="max-w-7xl mx-auto">
-                        <h2 className="text-3xl lg:text-3xl font-bold text-white text-center mb-8">Services You Can Request</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                            {servicesCore.map(({ title, icon: Icon }) => (
-                                <div
-                                    key={title}
-                                    className="group bg-white transition hover:shadow-xl rounded-0 p-6 relative overflow-hidden cursor-pointer"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <div className="bg-[#00799c] text-white p-2.5 rounded-full">
-                                            <Icon className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
-                                                {title}
-                                            </h3>
+                        <div className="bg-cream lg:py-20 py-10 lg:px-[50px] rounded-3xl">
+                            <h2 className="text-3xl lg:text-5xl font-normal text-dark lg:mb-[50px] text-[#0A1B04] text-center">Services You Can Request</h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                                {servicesCore.map(({ title, image }) => (
+                                    <div
+                                        key={title}
+                                        className="group bg-white border border-[#D9D9D9] transition hover:shadow-xl rounded-2xl px-8 py-[30px] relative overflow-hidden cursor-pointer"
+                                    >
+                                        <div className="flex items-center gap-4">
+                                            <img src={image} className="w-10 h-10" alt="" />
+                                            <div>
+                                                <h3 className="lg:text-2xl text-lg font-medium text-[#0A1B04]">
+                                                    {title}
+                                                </h3>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="bg-gray-50 py-10">
+                <section className="bg-white">
                     <div className="max-w-7xl mx-auto px-4 md:px-6">
                         <div className="text-center">
-                            <h2 className="text-3xl lg:text-3xl font-bold text-gray-900 mb-6">Services You Can Request</h2>
+                            <h2 className="text-3xl lg:text-5xl font-normal text-dark lg:mb-[50px] text-[#0A1B04] text-center">Services You Can Request</h2>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mb-8">
                             {/* First column: large card (spans 2 rows) */}
                             <div className="lg:row-span-2">
-                                <div className="h-full group bg-white hover:bg-white transition border border-gray-200 hover:shadow-xl rounded-0 p-7 relative overflow-hidden hover:border-[#00799c] flex flex-col">
+                                <div className="h-full group bg-white hover:bg-white transition border border-[#D9D9D9] hover:shadow-xl p-8 relative overflow-hidden flex flex-col rounded-2xl">
                                     {(() => {
                                         const Icon = services[0].icon;
                                         return (
@@ -212,8 +205,8 @@ export default function Marketplace() {
                             {services.slice(1, 5).map(({ name, icon: Icon, services: serviceList }) => (
                                 <div
                                     key={name}
-                                    className="group bg-white hover:bg-white transition border border-gray-200
-                                    hover:shadow-xl rounded-0 p-6 relative overflow-hidden hover:border-[#00799c] flex flex-col"
+                                    className="group bg-white hover:bg-white transition border border-[#D9D9D9]
+                                    hover:shadow-xl rounded-2xl p-8 relative overflow-hidden flex flex-col"
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="bg-[#00799c] text-white p-2.5 rounded-full">
@@ -239,8 +232,8 @@ export default function Marketplace() {
                             {services.slice(5, 7).map(({ name, icon: Icon, services: serviceList }) => (
                                 <div
                                     key={name}
-                                    className="group bg-white hover:bg-white transition border border-gray-200 hover:shadow-xl
-                                    rounded-0 p-6 relative overflow-hidden hover:border-[#00799c] flex flex-col"
+                                    className="group bg-white hover:bg-white transition border border-[#D9D9D9] hover:shadow-xl
+                                    rounded-2xl p-8 relative  overflow-hidden flex flex-col"
                                 >
                                     <div className="flex items-center gap-4">
                                         <div className="bg-[#00799c] text-white p-2.5 rounded-full">
@@ -263,54 +256,38 @@ export default function Marketplace() {
                     </div>
                 </section>
 
-                <section className="py-10 bg-white">
+                <section className="py-[120px] bg-white">
                     <div className="max-w-7xl mx-auto px-4 text-center">
-                        <h3 className="text-3xl lg:text-3xl font-bold text-gray-900">Why Use the Vacei Marketplace?</h3>
-
-                        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-7xl mx-auto">
-                            {marketplaces.map((marketplace, i) => (
-                                <div key={i} className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-primary mt-1" />
-                                    <p className="text-black text-[15px]">{marketplace}</p>
-                                </div>
-                            ))}
+                        <div className="lg:px-[60px] px-4 lg:py-[50px] py-5 rounded-3xl" style={{ boxShadow: '0px 0px 44px 0px #00000014' }}>
+                            <h3 className="text-3xl lg:text-5xl font-normal text-dark lg:mb-[60px] leading-14">Why Use the Vacei Marketplace?</h3>
+                            <div className="lg:mt-12 mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 text-left max-w-6xl mx-auto">
+                                {marketplaces.map((marketplace, i) => (
+                                    <div key={i} className="flex items-center gap-3">
+                                        <img src="/check.svg" className="w-4 h-4 object-contain" alt="" />
+                                        <p className="text-black text-base font-normal">{marketplace}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <section className="py-10 bg-primary">
-                    <div className="max-w-7xl mx-auto px-4 text-center">
-                        <h3 className="text-3xl lg:text-3xl font-bold text-white mb-4">Are You a Service Provider?</h3>
-                        <p className="mt-2 text-white text-base text-center mb-6">Join our network of verified experts. Receive matched requests and grow your business.</p>
-                        <Link href="javascript:void(0)" className="bg-white px-4 py-2.5 font-medium">Apply as a Verified Partner</Link>
-                    </div>
-                </section>
-
-                <section className="bg-neutral-900 text-white py-10 px-6">
-                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center md:gap-12 gap-6">
-
-                        <div>
-                            <h2 className="text-3xl font-extrabold leading-tight tracking-tight">
-                                Get Started
+                <section className="bg-[#0A1B04] text-white py-[100px] px-4">
+                    <div className="lg:max-w-2xl max-w-xl mx-auto px-4">
+                        <div className="text-center mb-[50px]">
+                            <h2 className="text-3xl lg:text-5xl font-normal leading-14 text-white mb-4">
+                                Are You a Service Provider?
                             </h2>
-                            <p className="text-neutral-400 text-lg mt-3">
-                                Ready to request your first service? Whether it's bookkeeping, incorporation, cybersecurity, or a residency scheme - it's all here.
-                            </p>
+                            <p className="text-base text-[#979797] font-light mb-[50px]">Join our network of verified experts. Receive matched requests and grow your business.</p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 md:justify-end">
-                            <Link
-                                href="javascript:void(0)"
-                                className="bg-white text-black font-medium px-6 py-3 shadow hover:bg-neutral-200 transition"
-                            >
-                                Create Free Account
-                            </Link>
-                            <Link
-                                href="javascript:void(0)"
-                                className="border border-white/20 text-white font-medium px-6 py-3 hover:bg-white/10 transition"
-                            >
-                                Post a Requirement
-                            </Link>
+                        <div className="flex flex-col sm:flex-row lg:flex-row gap-6 justify-center lg:px-0 px-5">
+                        <Link
+                            href="javascript:void(0)"
+                            className="bg-primary text-white font-normal px-8 py-3.5 text-lg rounded-lg capitalize text-center"
+                        >
+                            Apply as a Verified Partner
+                        </Link>
                         </div>
                     </div>
                 </section>
