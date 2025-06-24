@@ -2,18 +2,7 @@
 
 import Footer from "@/components/website/Footer"
 import Header from "@/components/website/Header"
-import { CheckCircle } from 'lucide-react'
 import Link from "next/link"
-
-import {
-    BookOpenCheck,
-    BarChart3,
-    RefreshCcw,
-    MessageCircle,
-    BadgeCheck,
-    Globe2,
-    Layers3,
-} from 'lucide-react';
 
 const services = [
     {

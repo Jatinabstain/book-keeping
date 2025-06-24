@@ -31,14 +31,8 @@ export default function Header() {
     }, []);
 
     return (
-        // <header
-        //     className={`w-full top-0 z-[999] bg-white transition-all duration-300 ${pathname === '/website'
-        //             ? `fixed ${scrolled ? 'bg-white/60 backdrop-blur-lg' : 'lg:bg-transparent bg-white/80 backdrop-blur-lg'}`
-        //             : ''
-        //         }`}
-        // >
         <header
-    className={`fixed w-full top-0 z-[999] lg:bg-transparent transition-all duration-300 ${
+    className={`absolute w-full top-0 z-[999] lg:bg-transparent transition-all duration-300 ${
         scrolled ? ' bg-white/60 backdrop-blur-lg' : ''
     }`}
 >

@@ -21,20 +21,11 @@ import HowItWorkServices from "@/components/website/HowItWorkServices"
 
 const services = [
     {
-        name: 'Finance & Tax',
-        icon: FileText,
-        services: [
-            "CFO-as-a-Service",
-            "Budgeting & Forecasts",
-            "Transfer Pricing Reports",
-            "Tax Advisory"
-        ],
-    },
-    {
         name: 'Legal & Compliance',
-        icon: Scale,
+        images: "/legal.png",
+        background: "bg-[#DBFFD8]",
         services: [
-            "Company Formations",
+            "Legal & Compliance",
             "GDPR & AML Compliance",
             "KYC/UBO Checks",
             "Legal Drafting & Shareholder Agreements",
@@ -44,8 +35,32 @@ const services = [
         ],
     },
     {
+        name: 'Strategy & Marketing',
+        images: "/strategy.png",
+        background: "bg-[#FAFFD8]",
+        services: [
+            "Business Plans & Pitch Decks",
+            "Digital Marketing & SEO",
+            "Market Research",
+            "Branding & Creative Services",
+            "Website & App Development",
+        ],
+    },
+    {
+        name: 'Finance & Tax',
+        images: "/finance-compliance.png",
+        background: "bg-[#D8F5FF]",
+        services: [
+            "CFO-as-a-Service",
+            "Budgeting & Forecasts",
+            "Transfer Pricing Reports",
+            "Tax Advisory"
+        ],
+    },
+    {
         name: 'HR & Payroll',
-        icon: UserCog,
+        images: "/hr.png",
+        background: "bg-[#D8DDFF]",
         services: [
             "Employment Contracts",
             "Payroll Setup & Reporting",
@@ -55,23 +70,13 @@ const services = [
     },
     {
         name: 'Cybersecurity & IT',
-        icon: ShieldCheck,
+        images: "/it.png",
+        background: "bg-[#FFD8D8]",
         services: [
             "ISO 27001 / ISO 9001 Certification",
             "Cybersecurity Risk Assessments",
             "Penetration Testing",
             "IT Infrastructure Setup"
-        ],
-    },
-    {
-        name: 'Strategy & Marketing',
-        icon: Lightbulb,
-        services: [
-            "Business Plans & Pitch Decks",
-            "Digital Marketing & SEO",
-            "Market Research",
-            "Branding & Creative Services",
-            "Website & App Development"
         ],
     }
 ];
@@ -133,7 +138,7 @@ export default function Marketplace() {
                             <div className="text-center max-w-5xl mx-auto">
                                 <h2 className="text-3xl lg:text-3xl font-medium mb-4">What Is the Vacei Marketplace?</h2>
                                 <p className="mb-8 text-black mx-auto">The Vacei Marketplace connects businesses with trusted, verified service providers. Whether you need an ISO certification, company formation, residency guidance, legal drafting, or marketing support - simply post your requirement, set your deadline, and review proposals from vetted experts. Everything is handled securely, transparently, and professionally.</p>
-                                
+
                                 <div className="bg-[#0A1B04] rounded-lg px-12 py-[60px]">
                                     <p className="text-white text-[32px] leading-10 capitalize">Every request and completed service remains saved and trackable <span className="text-[#D0D0D0]">within your dashboard - with full documentation, chat history, and audit trail.</span></p>
                                 </div>
@@ -174,80 +179,50 @@ export default function Marketplace() {
                         <div className="text-center">
                             <h2 className="text-3xl lg:text-5xl font-normal text-dark lg:mb-[50px] text-[#0A1B04] text-center">Services You Can Request</h2>
                         </div>
-                        <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mb-8">
-                            {/* First column: large card (spans 2 rows) */}
-                            <div className="lg:row-span-2">
-                                <div className="h-full group bg-white hover:bg-white transition border border-[#D9D9D9] hover:shadow-xl p-8 relative overflow-hidden flex flex-col rounded-2xl">
-                                    {(() => {
-                                        const Icon = services[0].icon;
-                                        return (
-                                            <div className="flex items-center gap-4">
-                                                <div className="bg-[#00799c] text-white p-2.5 rounded-full">
-                                                    <Icon className="w-7 h-7" />
-                                                </div>
-                                                <div>
-                                                    <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
-                                                        {services[0].name}
-                                                    </h3>
-                                                </div>
-                                            </div>
-                                        );
-                                    })()}
-                                    <ul className="list-disc pl-8 mt-6 space-y-3 text-gray-700 text-lg">
-                                        {services[0].services.map((service, idx) => (
-                                            <li key={idx}>{service}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-
-                            {/* Next 3 standard cards */}
-                            {services.slice(1, 5).map(({ name, icon: Icon, services: serviceList }) => (
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                            {/* Top row: 2 cards side by side on desktop */}
+                            {services.slice(0, 2).map(({ name, images, background, services: serviceList }) => (
                                 <div
                                     key={name}
-                                    className="group bg-white hover:bg-white transition border border-[#D9D9D9]
-                                    hover:shadow-xl rounded-2xl p-8 relative overflow-hidden flex flex-col"
+                                    className={`${background ?? ''} group transition border border-[#D9D9D9] hover:shadow-xl
+                                    rounded-2xl p-8 relative  overflow-hidden flex flex-col`}
                                 >
                                     <div className="flex items-center gap-4">
-                                        <div className="bg-[#00799c] text-white p-2.5 rounded-full">
-                                            <Icon className="w-6 h-6" />
-                                        </div>
+                                        <img src={images} className="w-6 h-6 object-contain" alt="" />
                                         <div>
-                                            <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
+                                            <h3 className="text-xl font-semibold text-black">
                                                 {name}
                                             </h3>
                                         </div>
                                     </div>
                                     <ul className="list-disc pl-6 mt-4 space-y-2 text-gray-700">
                                         {serviceList.map((service, idx) => (
-                                            <li key={idx}>{service}</li>
+                                            <li className="flex gap-2.5 items-center text-[#3D3D3D] lg:text-lg text-base" key={idx}><img className="w-4 h-4 object-contain" alt="list" src="/list-point.svg"></img>  {service}</li>
                                         ))}
                                     </ul>
                                 </div>
                             ))}
                         </div>
 
-                        {/* Last row with 2 cards side-by-side on desktop, stacked on mobile */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                            {services.slice(5, 7).map(({ name, icon: Icon, services: serviceList }) => (
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {/* Bottom row: 3 cards side by side on desktop */}
+                            {services.slice(2, 5).map(({ name, images, background, services: serviceList }) => (
                                 <div
                                     key={name}
-                                    className="group bg-white hover:bg-white transition border border-[#D9D9D9] hover:shadow-xl
-                                    rounded-2xl p-8 relative  overflow-hidden flex flex-col"
+                                    className={`${background ?? ''} group transition border border-[#D9D9D9] hover:shadow-xl
+                                    rounded-2xl p-8 relative  overflow-hidden flex flex-col`}
                                 >
                                     <div className="flex items-center gap-4">
-                                        <div className="bg-[#00799c] text-white p-2.5 rounded-full">
-                                            <Icon className="w-6 h-6" />
-                                        </div>
+                                        <img src={images} className="w-6 h-6 object-contain" alt="" />
                                         <div>
-                                            <h3 className="text-lg font-semibold text-black group-hover:text-[#00799c]">
+                                            <h3 className="text-xl font-semibold text-black">
                                                 {name}
                                             </h3>
                                         </div>
                                     </div>
                                     <ul className="list-disc pl-6 mt-4 space-y-2 text-gray-700">
                                         {serviceList.map((service, idx) => (
-                                            <li key={idx}>{service}</li>
+                                            <li className="flex gap-2.5 items-center text-[#3D3D3D] lg:text-lg text-base" key={idx}><img className="w-4 h-4 object-contain" alt="list" src="/list-point.svg"></img>  {service}</li>
                                         ))}
                                     </ul>
                                 </div>
@@ -282,12 +257,12 @@ export default function Marketplace() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row lg:flex-row gap-6 justify-center lg:px-0 px-5">
-                        <Link
-                            href="javascript:void(0)"
-                            className="bg-primary text-white font-normal px-8 py-3.5 text-lg rounded-lg capitalize text-center"
-                        >
-                            Apply as a Verified Partner
-                        </Link>
+                            <Link
+                                href="javascript:void(0)"
+                                className="bg-primary text-white font-normal px-8 py-3.5 text-lg rounded-lg capitalize text-center"
+                            >
+                                Apply as a Verified Partner
+                            </Link>
                         </div>
                     </div>
                 </section>
